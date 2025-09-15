@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Aid Guide - India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .emergency-banner {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .firstaid-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .firstaid-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .firstaid-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .firstaid-card h2 {
+            color: #4a5568;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .steps {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .steps h3 {
+            color: #2d5a2d;
+            margin-bottom: 15px;
+        }
+
+        .steps ol {
+            margin-left: 20px;
+        }
+
+        .steps li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .warning h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .emergency-contacts {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .emergency-contacts h3 {
+            color: #155724;
+            margin-bottom: 15px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #c3e6cb;
+        }
+
+        .contact-name {
+            font-weight: 600;
+            color: #155724;
+            margin-bottom: 5px;
+        }
+
+        .contact-number {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            opacity: 0.8;
+        }
+
+        .close-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .close-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .firstaid-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Emergency SOS Button */
+    .sos-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .sos-popup {
+      display: none;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      background: white;
+      color: black;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+    .sos-popup h3 {
+      margin-top: 0;
+      color: red;
+    }
+
+    </style>
+</head>
+<body>
+    <button class="close-btn" onclick="window.close()">✕ Close</button>
+
+    <div class="container">
+        <div class="header">
+            <h1>🚑 First Aid Guide - India</h1>
+            <p>Essential Emergency Procedures & Healthcare Information</p>
+        </div>
+
+        <div class="emergency-banner">
+            🚨 In case of medical emergency, call 108 immediately or visit the nearest hospital
+        </div>
+
+        <div class="firstaid-grid">
+            <!-- CPR -->
+            <div class="firstaid-card">
+                <h2>🫀 CPR (Cardiopulmonary Resuscitation)</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Plse2FOkV4Q" 
+                            title="CPR Training Video" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="steps">
+                    <h3>Steps to perform CPR:</h3>
+                    <ol>
+                        <li>Check for responsiveness - tap shoulders and shout</li>
+                        <li>Call 108 for emergency services</li>
+                        <li>Place heel of one hand on center of chest</li>
+                        <li>Place other hand on top, interlock fingers</li>
+                        <li>Push hard and fast (100-120 compressions per minute)</li>
+                        <li>Allow chest to fully recoil between compressions</li>
+                        <li>Continue until help arrives or person responds</li>
+                    </ol>
+                </div>
+                <div class="warning">
+                    <h4>⚠️ Important:</h4>
+                    <p>Only perform CPR if the person is unconscious and not breathing normally. For children, use gentler compressions.</p>
+                </div>
+            </div>
+
+            <!-- Choking -->
+            <div class="firstaid-card">
+                <h2>🤐 Choking (Heimlich Maneuver)</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7CgtIgSyAiU" 
+                            title="Heimlich Maneuver Video" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="steps">
+                    <h3>Steps for choking relief:</h3>
+                    <ol>
+                        <li>Ask "Are you choking?" - if they can speak, let them cough</li>
+                        <li>Stand behind the person, wrap arms around waist</li>
+                        <li>Make a fist with one hand, place thumb side above navel</li>
+                        <li>Grasp fist with other hand, give quick upward thrusts</li>
+                        <li>Continue until object is expelled or person becomes unconscious</li>
+                        <li>If unconscious, begin CPR</li>
+                    </ol>
+                </div>
+                <div class="warning">
+                    <h4>⚠️ Important:</h4>
+                    <p>For pregnant women or obese persons, place hands higher on chest. For infants, use back blows and chest thrusts.</p>
+                </div>
+            </div>
+
+            <!-- Bleeding -->
+            <div class="firstaid-card">
+                <h2>🩸 Severe Bleeding</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/jYtJS1PtNq0" 
+                            title="Bleeding Control Video" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="steps">
+                    <h3>Steps to control bleeding:</h3>
+                    <ol>
+                        <li>Call 108 immediately for severe bleeding</li>
+                        <li>Apply direct pressure with clean cloth or bandage</li>
+                        <li>Elevate the injured area above heart level</li>
+                        <li>If bleeding continues, apply more pressure</li>
+                        <li>Do not remove objects embedded in wound</li>
+                        <li>Keep pressure until help arrives</li>
+                    </ol>
+                </div>
+                <div class="warning">
+                    <h4>⚠️ Important:</h4>
+                    <p>Never remove embedded objects. If blood soaks through, add more layers without removing the first.</p>
+                </div>
+            </div>
+
+            <!-- Burns -->
+            <div class="firstaid-card">
+                <h2>🔥 Burns</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/LIaqKI7B8EI" 
+                            title="Burn Treatment Video" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="steps">
+                    <h3>Steps for burn treatment:</h3>
+                    <ol>
+                        <li>Remove person from source of burn</li>
+                        <li>Cool the burn with cool (not cold) running water for 10-15 minutes</li>
+                        <li>Remove jewelry and tight clothing before swelling</li>
+                        <li>Cover with clean, dry cloth or bandage</li>
+                        <li>Do not use ice, butter, or other home remedies</li>
+                        <li>Seek medical help for severe burns</li>
+                    </ol>
+                </div>
+                <div class="warning">
+                    <h4>⚠️ Important:</h4>
+                    <p>For chemical burns, flush with water for at least 20 minutes. For electrical burns, ensure power is off first.</p>
+                </div>
+            </div>
+
+            <!-- Fractures -->
+            <div class="firstaid-card">
+                <h2>🦴 Fractures & Sprains</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/2v8vlXgGXwE" 
+                            title="Fracture Treatment Video" 
+                            allowfullscreen>
+                    </iframe>
+                    <iframe src="https://www.youtube.com/embed/BZMD3cfyjVI" 
+                            title="sprain Treatment Video" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="steps">
+                    <h3>Steps for fracture/sprain care:</h3>
+                    <ol>
+                        <li>Keep the injured area still and supported</li>
+                        <li>Apply ice wrapped in cloth for 15-20 minutes</li>
+                        <li>Elevate the injured area if possible</li>
+                        <li>Do not try to straighten or move the injured area</li>
+                        <li>Seek medical attention for suspected fractures</li>
+                        <li>Use RICE: Rest, Ice, Compression, Elevation</li>
+                    </ol>
+                </div>
+                <div class="warning">
+                    <h4>⚠️ Important:</h4>
+                    <p>If bone is visible or limb is deformed, call 108 immediately. Do not attempt to reset the bone.</p>
+                </div>
+            </div>
+
+            <!-- Heat Stroke -->
+            <div class="firstaid-card">
+                <h2>🌡️ Heat Stroke</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/MCizXwQx3_4" 
+                            title="Heat Stroke Treatment Video" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="steps">
+                    <h3>Steps for heat stroke treatment:</h3>
+                    <ol>
+                        <li>Move person to cool, shaded area</li>
+                        <li>Remove excess clothing</li>
+                        <li>Cool the person with water, ice packs, or wet cloths</li>
+                        <li>Fan the person to increase cooling</li>
+                        <li>Give cool water if person is conscious</li>
+                        <li>Call 108 if symptoms are severe</li>
+                    </ol>
+                </div>
+                <div class="warning">
+                    <h4>⚠️ Important:</h4>
+                    <p>Heat stroke is a medical emergency. Symptoms include high body temperature, confusion, and loss of consciousness.</p>
+                </div>
+            </div>
+        </div>
+
+<!-- nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn -->
+        <button class="sos-btn" onclick="toggleSOS()">🚨 Emergency</button>
+  <!-- 🚑 Emergency Popup -->
+        <div id="sosPopup" class="sos-popup">
+            <h3>🚑 Emergency Help</h3>
+                <ul>
+                     <li>🚓 Police: <a href="tel:100">100</a></li>
+                    <li>🚑 Ambulance: <a href="tel:108">108</a></li>
+                    <li>🔥 Fire: <a href="tel:101">101</a></li>
+                    <li>📞 Universal Emergency: <a href="tel:112">112</a></li>
+                    <li>📞 Women Helpline: <a href="tel:1091">1091</a></li>
+                    <li>📞 Child Helpline: <a href="tel:1098">1098</a></li>
+                    <li>📞 Mental Health: <a href="tel:1800-599-0019">1800-599-0019</a></li>
+                    <li>📞 Poison Control: <a href="tel:1800-116-117">1800-116-117</a></li>
+                    <li>🏥 Nearest Hospital: <a href="https://www.google.com/maps/search/nearest+hospital/" target="_blank">Open in Google Maps</a></li>
+                </ul>
+        </div>
+<!-- nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn -->
+  <script>
+    function toggleSOS() {
+      const popup = document.getElementById('sosPopup');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+        <div class="emergency-contacts">
+            <h3>🚨 Emergency Contacts </h3>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-name">Emergency Services</div>
+                    <div class="contact-number">108</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-name">Police</div>
+                    <div class="contact-number">100</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-name">Fire Service</div>
+                    <div class="contact-number">101</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-name">Ambulance</div>
+                    <div class="contact-number">102</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-name">Women Helpline</div>
+                    <div class="contact-number">1091</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-name">Child Helpline</div>
+                    <div class="contact-number">1098</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-name">Mental Health</div>
+                    <div class="contact-number">1800-599-0019</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-name">Poison Control</div>
+                    <div class="contact-number">1800-116-117</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Disclaimer:</strong> This first aid guide is for educational purposes only. Always seek professional medical help for serious injuries or medical emergencies.</p>
+            <p style="margin-top: 10px;">For medical emergencies in India, call 108 or visit the nearest hospital immediately.</p>
+        </div>
+    </div>
+
+    <script>
+        // Add click handlers for emergency numbers
+        document.querySelectorAll('.contact-number').forEach(element => {
+            element.style.cursor = 'pointer';
+            element.addEventListener('click', function() {
+                const number = this.textContent;
+                if (confirm(`Call ${number}?`)) {
+                    // In a real app, this would initiate a phone call
+                    alert(`Calling ${number}... (This is a demo - in a real app, this would dial the number)`);
+                }
+            });
+        });
+
+        // Add keyboard shortcut to close window
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                window.close();
+            }
+        });
+    </script>
+</body>
+</html>

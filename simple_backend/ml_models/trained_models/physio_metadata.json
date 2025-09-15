@@ -1,0 +1,291 @@
+{
+  "physio_categories": [
+    "back_pain",
+    "neck_pain",
+    "knee_pain",
+    "shoulder_pain",
+    "ankle_injury",
+    "wrist_injury",
+    "posture_correction",
+    "strength_training",
+    "flexibility",
+    "balance_training",
+    "cardio_fitness",
+    "sports_injury",
+    "rehabilitation",
+    "prevention",
+    "ergonomics"
+  ],
+  "physio_responses": {
+    "back_pain": {
+      "description": "Back pain management and strengthening exercises",
+      "recommendations": [
+        "Practice gentle stretching exercises daily",
+        "Strengthen core muscles with planks and bridges",
+        "Maintain proper posture throughout the day",
+        "Avoid prolonged sitting - take breaks every hour",
+        "Use proper lifting techniques"
+      ],
+      "exercises": [
+        "Cat-cow stretches",
+        "Child's pose",
+        "Pelvic tilts",
+        "Bird-dog exercise",
+        "Dead bug exercise",
+        "Glute bridges",
+        "Wall sits"
+      ],
+      "precautions": [
+        "Avoid heavy lifting during acute pain",
+        "Stop exercises if pain increases",
+        "Consult healthcare provider for severe pain",
+        "Use ice/heat therapy as needed"
+      ]
+    },
+    "neck_pain": {
+      "description": "Neck pain relief and posture improvement",
+      "recommendations": [
+        "Practice neck stretches and range of motion exercises",
+        "Strengthen neck and upper back muscles",
+        "Improve workstation ergonomics",
+        "Use proper pillow support while sleeping",
+        "Take frequent breaks from computer work"
+      ],
+      "exercises": [
+        "Neck rotations",
+        "Chin tucks",
+        "Shoulder blade squeezes",
+        "Upper trapezius stretches",
+        "Levator scapulae stretches",
+        "Cervical retraction",
+        "Neck side bends"
+      ],
+      "precautions": [
+        "Move slowly and gently",
+        "Stop if dizziness occurs",
+        "Avoid sudden jerky movements",
+        "Consult if pain radiates to arms"
+      ]
+    },
+    "knee_pain": {
+      "description": "Knee pain management and joint strengthening",
+      "recommendations": [
+        "Strengthen quadriceps and hamstrings",
+        "Improve flexibility in hip and ankle",
+        "Use proper footwear and orthotics if needed",
+        "Maintain healthy weight to reduce joint stress",
+        "Avoid high-impact activities during pain"
+      ],
+      "exercises": [
+        "Straight leg raises",
+        "Wall sits",
+        "Clamshells",
+        "Heel slides",
+        "Quad sets",
+        "Hamstring stretches",
+        "Calf raises"
+      ],
+      "precautions": [
+        "Avoid deep squats during acute pain",
+        "Use pain as a guide for exercise intensity",
+        "Consider low-impact alternatives",
+        "Consult for severe swelling or instability"
+      ]
+    },
+    "shoulder_pain": {
+      "description": "Shoulder pain relief and rotator cuff strengthening",
+      "recommendations": [
+        "Strengthen rotator cuff muscles",
+        "Improve shoulder blade stability",
+        "Maintain proper shoulder posture",
+        "Avoid overhead activities during pain",
+        "Use ice therapy for inflammation"
+      ],
+      "exercises": [
+        "Pendulum exercises",
+        "Wall slides",
+        "External rotation with band",
+        "Internal rotation with band",
+        "Scapular retraction",
+        "Doorway chest stretch",
+        "Sleeper stretch"
+      ],
+      "precautions": [
+        "Avoid overhead lifting during pain",
+        "Stop if pain increases significantly",
+        "Use proper form for all exercises",
+        "Consult for severe pain or weakness"
+      ]
+    },
+    "ankle_injury": {
+      "description": "Ankle injury rehabilitation and strengthening",
+      "recommendations": [
+        "Follow RICE protocol (Rest, Ice, Compression, Elevation)",
+        "Gradually restore range of motion",
+        "Strengthen ankle stabilizers",
+        "Improve balance and proprioception",
+        "Use proper footwear and support"
+      ],
+      "exercises": [
+        "Ankle alphabet exercises",
+        "Calf raises",
+        "Single leg balance",
+        "Ankle circles",
+        "Resistance band exercises",
+        "Heel and toe walks",
+        "Balance board training"
+      ],
+      "precautions": [
+        "Follow medical clearance for weight-bearing",
+        "Progress gradually with exercises",
+        "Stop if pain increases",
+        "Use ankle support as recommended"
+      ]
+    },
+    "wrist_injury": {
+      "description": "Wrist pain management and strengthening",
+      "recommendations": [
+        "Rest and protect the injured wrist",
+        "Gradually restore range of motion",
+        "Strengthen forearm muscles",
+        "Improve ergonomics at work",
+        "Use proper typing and mouse techniques"
+      ],
+      "exercises": [
+        "Wrist flexion and extension",
+        "Wrist circles",
+        "Grip strengthening",
+        "Finger stretches",
+        "Tendon gliding exercises",
+        "Wrist pronation/supination",
+        "Resistance band exercises"
+      ],
+      "precautions": [
+        "Avoid repetitive strain activities",
+        "Use ergonomic equipment",
+        "Take frequent breaks",
+        "Consult for severe pain or numbness"
+      ]
+    },
+    "posture_correction": {
+      "description": "Posture improvement and ergonomic guidance",
+      "recommendations": [
+        "Strengthen core and back muscles",
+        "Stretch tight chest and hip flexors",
+        "Set up ergonomic workstation",
+        "Practice good posture habits",
+        "Take regular movement breaks"
+      ],
+      "exercises": [
+        "Wall angels",
+        "Chest stretches",
+        "Hip flexor stretches",
+        "Plank variations",
+        "Bird-dog exercise",
+        "Thoracic spine mobility",
+        "Glute bridges"
+      ],
+      "precautions": [
+        "Progress gradually with exercises",
+        "Maintain neutral spine position",
+        "Use proper ergonomic setup",
+        "Listen to your body"
+      ]
+    },
+    "strength_training": {
+      "description": "General strength training and muscle building",
+      "recommendations": [
+        "Start with bodyweight exercises",
+        "Focus on proper form over weight",
+        "Progressive overload principle",
+        "Include all major muscle groups",
+        "Allow adequate rest between sessions"
+      ],
+      "exercises": [
+        "Push-ups",
+        "Squats",
+        "Lunges",
+        "Planks",
+        "Pull-ups or rows",
+        "Deadlifts (with proper form)",
+        "Overhead press"
+      ],
+      "precautions": [
+        "Warm up before exercising",
+        "Use proper lifting techniques",
+        "Start with lighter weights",
+        "Consult trainer for proper form"
+      ]
+    },
+    "flexibility": {
+      "description": "Flexibility training and mobility improvement",
+      "recommendations": [
+        "Stretch after warming up",
+        "Hold stretches for 30-60 seconds",
+        "Focus on major muscle groups",
+        "Include dynamic and static stretching",
+        "Practice regularly for best results"
+      ],
+      "exercises": [
+        "Hamstring stretches",
+        "Quad stretches",
+        "Calf stretches",
+        "Hip flexor stretches",
+        "Shoulder stretches",
+        "Spinal twists",
+        "Neck and back stretches"
+      ],
+      "precautions": [
+        "Warm up before stretching",
+        "Avoid bouncing in stretches",
+        "Stop if you feel sharp pain",
+        "Breathe deeply during stretches"
+      ]
+    },
+    "balance_training": {
+      "description": "Balance improvement and fall prevention",
+      "recommendations": [
+        "Start with simple balance exercises",
+        "Progress to more challenging positions",
+        "Include single-leg exercises",
+        "Practice on different surfaces",
+        "Use support initially if needed"
+      ],
+      "exercises": [
+        "Single leg stand",
+        "Tandem walking",
+        "Heel-to-toe walk",
+        "Standing on one foot",
+        "Balance board exercises",
+        "Yoga tree pose",
+        "Tai chi movements"
+      ],
+      "precautions": [
+        "Use support for safety",
+        "Progress gradually",
+        "Stop if you feel unsteady",
+        "Practice in safe environment"
+      ]
+    }
+  },
+  "exercise_programs": {
+    "beginner": {
+      "duration": "20-30 minutes",
+      "frequency": "3-4 times per week",
+      "intensity": "Low to moderate",
+      "focus": "Basic movements and form"
+    },
+    "intermediate": {
+      "duration": "30-45 minutes",
+      "frequency": "4-5 times per week",
+      "intensity": "Moderate",
+      "focus": "Increased strength and endurance"
+    },
+    "advanced": {
+      "duration": "45-60 minutes",
+      "frequency": "5-6 times per week",
+      "intensity": "Moderate to high",
+      "focus": "Performance and skill development"
+    }
+  }
+}

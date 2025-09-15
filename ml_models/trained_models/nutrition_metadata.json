@@ -1,0 +1,184 @@
+{
+  "nutrition_categories": [
+    "weight_loss",
+    "weight_gain",
+    "diabetes_management",
+    "heart_health",
+    "muscle_building",
+    "general_health",
+    "pregnancy_nutrition",
+    "child_nutrition",
+    "elderly_nutrition",
+    "sports_nutrition",
+    "vegetarian_vegan",
+    "food_allergies",
+    "digestive_health",
+    "immune_support",
+    "bone_health"
+  ],
+  "nutrition_responses": {
+    "weight_loss": {
+      "description": "Weight loss and healthy eating guidance",
+      "recommendations": [
+        "Focus on whole foods: vegetables, fruits, lean proteins, and whole grains",
+        "Control portion sizes and eat mindfully",
+        "Stay hydrated with water throughout the day",
+        "Limit processed foods, sugary drinks, and high-calorie snacks",
+        "Include regular physical activity in your routine"
+      ],
+      "foods_to_include": [
+        "Leafy greens (spinach, kale, lettuce)",
+        "Lean proteins (chicken breast, fish, tofu)",
+        "Whole grains (brown rice, quinoa, oats)",
+        "Healthy fats (avocado, nuts, olive oil)",
+        "Low-calorie fruits (berries, apples, citrus)"
+      ],
+      "foods_to_avoid": [
+        "Processed foods and fast food",
+        "Sugary drinks and sodas",
+        "High-calorie snacks and desserts",
+        "Fried foods and excessive oils",
+        "Alcohol in excess"
+      ]
+    },
+    "weight_gain": {
+      "description": "Healthy weight gain and muscle building nutrition",
+      "recommendations": [
+        "Eat more frequent, nutrient-dense meals",
+        "Include healthy fats and proteins in each meal",
+        "Choose whole foods over processed options",
+        "Stay consistent with meal timing",
+        "Combine with strength training exercises"
+      ],
+      "foods_to_include": [
+        "Lean proteins (chicken, fish, eggs, dairy)",
+        "Healthy fats (nuts, seeds, olive oil, avocado)",
+        "Complex carbohydrates (sweet potatoes, brown rice, oats)",
+        "Dairy products (milk, yogurt, cheese)",
+        "Nutrient-dense snacks (trail mix, protein bars)"
+      ],
+      "foods_to_avoid": [
+        "Empty calories from junk food",
+        "Excessive processed foods",
+        "Too much sugar and refined carbs",
+        "Unhealthy fats and trans fats"
+      ]
+    },
+    "diabetes_management": {
+      "description": "Blood sugar management and diabetes-friendly nutrition",
+      "recommendations": [
+        "Monitor carbohydrate intake and timing",
+        "Choose low glycemic index foods",
+        "Eat regular, balanced meals",
+        "Include fiber-rich foods",
+        "Limit added sugars and refined carbohydrates"
+      ],
+      "foods_to_include": [
+        "Non-starchy vegetables (broccoli, spinach, peppers)",
+        "Lean proteins (fish, chicken, beans)",
+        "Whole grains (quinoa, brown rice, oats)",
+        "Healthy fats (nuts, olive oil, avocado)",
+        "Low-sugar fruits (berries, apples)"
+      ],
+      "foods_to_avoid": [
+        "Sugary drinks and desserts",
+        "White bread and refined grains",
+        "Processed foods with added sugars",
+        "High-carb snacks and candies",
+        "Excessive fruit juices"
+      ]
+    },
+    "heart_health": {
+      "description": "Cardiovascular health and heart-friendly nutrition",
+      "recommendations": [
+        "Reduce sodium intake",
+        "Include omega-3 fatty acids",
+        "Eat plenty of fruits and vegetables",
+        "Choose lean proteins",
+        "Limit saturated and trans fats"
+      ],
+      "foods_to_include": [
+        "Fatty fish (salmon, mackerel, sardines)",
+        "Nuts and seeds (walnuts, flaxseeds)",
+        "Leafy greens and colorful vegetables",
+        "Whole grains and legumes",
+        "Olive oil and avocado"
+      ],
+      "foods_to_avoid": [
+        "High-sodium processed foods",
+        "Saturated fats (red meat, butter)",
+        "Trans fats (fried foods, baked goods)",
+        "Excessive alcohol",
+        "High-sugar foods and drinks"
+      ]
+    },
+    "muscle_building": {
+      "description": "Nutrition for muscle growth and strength training",
+      "recommendations": [
+        "Consume adequate protein (1.6-2.2g per kg body weight)",
+        "Eat balanced meals with carbs and fats",
+        "Time protein intake around workouts",
+        "Stay hydrated throughout the day",
+        "Get enough calories for growth"
+      ],
+      "foods_to_include": [
+        "Lean proteins (chicken, fish, eggs, Greek yogurt)",
+        "Complex carbs (sweet potatoes, brown rice, oats)",
+        "Healthy fats (nuts, olive oil, avocado)",
+        "Dairy products (milk, cottage cheese)",
+        "Post-workout recovery foods"
+      ],
+      "foods_to_avoid": [
+        "Insufficient protein intake",
+        "Excessive processed foods",
+        "Too much alcohol",
+        "Inadequate hydration",
+        "Skipping post-workout nutrition"
+      ]
+    },
+    "general_health": {
+      "description": "General health and wellness nutrition guidance",
+      "recommendations": [
+        "Eat a variety of colorful fruits and vegetables",
+        "Include lean proteins and healthy fats",
+        "Choose whole grains over refined grains",
+        "Stay hydrated with water",
+        "Practice mindful eating habits"
+      ],
+      "foods_to_include": [
+        "Colorful fruits and vegetables",
+        "Lean proteins (fish, poultry, beans)",
+        "Whole grains (quinoa, brown rice, oats)",
+        "Healthy fats (nuts, seeds, olive oil)",
+        "Dairy or dairy alternatives"
+      ],
+      "foods_to_avoid": [
+        "Excessive processed foods",
+        "Too much added sugar",
+        "High sodium foods",
+        "Trans fats and excessive saturated fats",
+        "Overconsumption of alcohol"
+      ]
+    }
+  },
+  "meal_plans": {
+    "weight_loss": {
+      "breakfast": "Oatmeal with berries and nuts",
+      "lunch": "Grilled chicken salad with mixed vegetables",
+      "dinner": "Baked fish with steamed broccoli and quinoa",
+      "snacks": "Apple slices with almond butter, Greek yogurt"
+    },
+    "weight_gain": {
+      "breakfast": "Scrambled eggs with whole grain toast and avocado",
+      "lunch": "Chicken and rice bowl with vegetables",
+      "dinner": "Salmon with sweet potato and green beans",
+      "snacks": "Trail mix, protein smoothie, cheese and crackers"
+    },
+    "diabetes_management": {
+      "breakfast": "Greek yogurt with berries and nuts",
+      "lunch": "Grilled chicken with quinoa and vegetables",
+      "dinner": "Baked fish with roasted vegetables",
+      "snacks": "Raw vegetables with hummus, small apple"
+    }
+  }
+}

@@ -1,0 +1,2496 @@
+[
+  {
+    "id": "hospital_0_0",
+    "name": "Tata Memorial Hospital - Delhi",
+    "city": "Delhi",
+    "state": "Delhi",
+    "latitude": 28.729828349967757,
+    "longitude": 77.18324413669346,
+    "contact_number": "+91-5268105446",
+    "emergency_contact": "+91-7448730700",
+    "bed_capacity": 259,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 118,
+    "overall_rating": 4.6,
+    "specialties": {
+      "cardiology": {
+        "rating": 3.6,
+        "doctors_count": 6,
+        "procedures_available": [
+          "heart transplant",
+          "bypass surgery"
+        ],
+        "equipment_available": [
+          "cath lab",
+          "stress test",
+          "echocardiogram",
+          "cardiac mri"
+        ],
+        "wait_time_days": 11,
+        "success_rate": 95.7
+      },
+      "orthopedics": {
+        "rating": 4.8,
+        "doctors_count": 1,
+        "procedures_available": [
+          "spinal surgery",
+          "arthroscopy",
+          "fracture repair",
+          "joint replacement"
+        ],
+        "equipment_available": [
+          "rehabilitation center",
+          "mri"
+        ],
+        "wait_time_days": 23,
+        "success_rate": 87.8
+      },
+      "emergency": {
+        "rating": 3.1,
+        "doctors_count": 10,
+        "procedures_available": [
+          "emergency medicine",
+          "resuscitation",
+          "trauma surgery"
+        ],
+        "equipment_available": [
+          "emergency or"
+        ],
+        "wait_time_days": 11,
+        "success_rate": 98.4
+      },
+      "oncology": {
+        "rating": 3.1,
+        "doctors_count": 9,
+        "procedures_available": [
+          "bone marrow transplant",
+          "surgery"
+        ],
+        "equipment_available": [
+          "linear accelerator",
+          "cyberknife"
+        ],
+        "wait_time_days": 11,
+        "success_rate": 95.3
+      },
+      "pediatrics": {
+        "rating": 3.2,
+        "doctors_count": 5,
+        "procedures_available": [
+          "vaccination",
+          "pediatric surgery"
+        ],
+        "equipment_available": [
+          "neonatal icu",
+          "child-friendly facilities",
+          "play therapy room"
+        ],
+        "wait_time_days": 7,
+        "success_rate": 89.1
+      },
+      "neurology": {
+        "rating": 4.3,
+        "doctors_count": 8,
+        "procedures_available": [
+          "neurosurgery",
+          "aneurysm repair",
+          "brain surgery"
+        ],
+        "equipment_available": [
+          "ct scan"
+        ],
+        "wait_time_days": 1,
+        "success_rate": 90.7
+      }
+    },
+    "equipment_quality": 3.9,
+    "doctor_expertise": 4.1,
+    "infrastructure": 3.5,
+    "patient_satisfaction": 3.6,
+    "wait_time_minutes": 27,
+    "cost_level": "Low",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 50,
+    "operation_theaters": 6,
+    "ambulance_services": false,
+    "created_at": "2018-04-27 20:48:06.780170"
+  },
+  {
+    "id": "hospital_0_1",
+    "name": "Breach Candy Hospital - Delhi",
+    "city": "Delhi",
+    "state": "Delhi",
+    "latitude": 28.613091246005737,
+    "longitude": 77.11791164757209,
+    "contact_number": "+91-5978992672",
+    "emergency_contact": "+91-6160398454",
+    "bed_capacity": 236,
+    "is_government": true,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 15,
+    "overall_rating": 3.9,
+    "specialties": {
+      "oncology": {
+        "rating": 3.9,
+        "doctors_count": 4,
+        "procedures_available": [
+          "bone marrow transplant"
+        ],
+        "equipment_available": [
+          "proton therapy",
+          "pet-ct",
+          "linear accelerator",
+          "mri",
+          "cyberknife"
+        ],
+        "wait_time_days": 3,
+        "success_rate": 90.8
+      },
+      "emergency": {
+        "rating": 3.8,
+        "doctors_count": 7,
+        "procedures_available": [
+          "stabilization",
+          "emergency medicine"
+        ],
+        "equipment_available": [
+          "emergency or",
+          "trauma bay"
+        ],
+        "wait_time_days": 21,
+        "success_rate": 89.5
+      },
+      "cardiology": {
+        "rating": 3.8,
+        "doctors_count": 2,
+        "procedures_available": [
+          "bypass surgery",
+          "heart transplant",
+          "valve replacement"
+        ],
+        "equipment_available": [
+          "cardiac mri",
+          "ecg"
+        ],
+        "wait_time_days": 24,
+        "success_rate": 88.8
+      },
+      "orthopedics": {
+        "rating": 4.3,
+        "doctors_count": 5,
+        "procedures_available": [
+          "spinal surgery",
+          "fracture repair",
+          "joint replacement"
+        ],
+        "equipment_available": [
+          "surgical robots"
+        ],
+        "wait_time_days": 15,
+        "success_rate": 87.6
+      },
+      "neurology": {
+        "rating": 4.2,
+        "doctors_count": 5,
+        "procedures_available": [
+          "deep brain stimulation",
+          "brain surgery",
+          "neurosurgery",
+          "aneurysm repair"
+        ],
+        "equipment_available": [
+          "pet scan",
+          "eeg",
+          "neurosurgery suite",
+          "mri",
+          "ct scan"
+        ],
+        "wait_time_days": 12,
+        "success_rate": 86.7
+      }
+    },
+    "equipment_quality": 4.7,
+    "doctor_expertise": 3.4,
+    "infrastructure": 4.2,
+    "patient_satisfaction": 3.3,
+    "wait_time_minutes": 16,
+    "cost_level": "Low",
+    "insurance_accepted": true,
+    "emergency_services": false,
+    "icu_beds": 5,
+    "operation_theaters": 15,
+    "ambulance_services": true,
+    "created_at": "2017-03-30 20:48:06.780488"
+  },
+  {
+    "id": "hospital_0_2",
+    "name": "Manipal Hospitals - Delhi",
+    "city": "Delhi",
+    "state": "Delhi",
+    "latitude": 28.74663431554476,
+    "longitude": 77.13480708128247,
+    "contact_number": "+91-4648635221",
+    "emergency_contact": "+91-7496258126",
+    "bed_capacity": 336,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 36,
+    "overall_rating": 4.1,
+    "specialties": {
+      "orthopedics": {
+        "rating": 3.8,
+        "doctors_count": 8,
+        "procedures_available": [
+          "arthroscopy"
+        ],
+        "equipment_available": [
+          "x-ray",
+          "surgical robots",
+          "rehabilitation center",
+          "mri"
+        ],
+        "wait_time_days": 20,
+        "success_rate": 91.3
+      },
+      "neurology": {
+        "rating": 4.2,
+        "doctors_count": 6,
+        "procedures_available": [
+          "neurosurgery"
+        ],
+        "equipment_available": [
+          "pet scan",
+          "mri",
+          "ct scan",
+          "neurosurgery suite",
+          "eeg"
+        ],
+        "wait_time_days": 15,
+        "success_rate": 96.0
+      },
+      "emergency": {
+        "rating": 4.3,
+        "doctors_count": 6,
+        "procedures_available": [
+          "resuscitation",
+          "stabilization",
+          "trauma surgery"
+        ],
+        "equipment_available": [
+          "trauma bay",
+          "emergency or"
+        ],
+        "wait_time_days": 18,
+        "success_rate": 86.8
+      },
+      "cardiology": {
+        "rating": 3.4,
+        "doctors_count": 10,
+        "procedures_available": [
+          "valve replacement",
+          "heart transplant",
+          "pacemaker"
+        ],
+        "equipment_available": [
+          "cardiac mri",
+          "cath lab"
+        ],
+        "wait_time_days": 26,
+        "success_rate": 97.9
+      }
+    },
+    "equipment_quality": 4.0,
+    "doctor_expertise": 4.5,
+    "infrastructure": 3.9,
+    "patient_satisfaction": 3.2,
+    "wait_time_minutes": 52,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 38,
+    "operation_theaters": 14,
+    "ambulance_services": false,
+    "created_at": "2015-12-24 20:48:06.780763"
+  },
+  {
+    "id": "hospital_0_3",
+    "name": "AIIMS - Delhi",
+    "city": "Delhi",
+    "state": "Delhi",
+    "latitude": 28.643043803308352,
+    "longitude": 77.02025128268266,
+    "contact_number": "+91-1317598825",
+    "emergency_contact": "+91-8966768639",
+    "bed_capacity": 448,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 0,
+    "overall_rating": 3.8,
+    "specialties": {
+      "pediatrics": {
+        "rating": 3.9,
+        "doctors_count": 10,
+        "procedures_available": [
+          "developmental assessment",
+          "neonatal care",
+          "pediatric surgery",
+          "vaccination"
+        ],
+        "equipment_available": [
+          "child-friendly facilities"
+        ],
+        "wait_time_days": 29,
+        "success_rate": 90.8
+      },
+      "cardiology": {
+        "rating": 4.0,
+        "doctors_count": 10,
+        "procedures_available": [
+          "valve replacement",
+          "bypass surgery",
+          "pacemaker",
+          "angioplasty",
+          "heart transplant"
+        ],
+        "equipment_available": [
+          "cath lab",
+          "stress test",
+          "ecg"
+        ],
+        "wait_time_days": 14,
+        "success_rate": 86.2
+      },
+      "oncology": {
+        "rating": 4.8,
+        "doctors_count": 8,
+        "procedures_available": [
+          "surgery",
+          "radiation therapy",
+          "chemotherapy",
+          "bone marrow transplant"
+        ],
+        "equipment_available": [
+          "pet-ct"
+        ],
+        "wait_time_days": 20,
+        "success_rate": 87.9
+      },
+      "orthopedics": {
+        "rating": 3.8,
+        "doctors_count": 2,
+        "procedures_available": [
+          "arthroscopy",
+          "fracture repair",
+          "spinal surgery",
+          "joint replacement"
+        ],
+        "equipment_available": [
+          "x-ray",
+          "rehabilitation center"
+        ],
+        "wait_time_days": 30,
+        "success_rate": 90.6
+      }
+    },
+    "equipment_quality": 4.0,
+    "doctor_expertise": 4.0,
+    "infrastructure": 3.5,
+    "patient_satisfaction": 4.0,
+    "wait_time_minutes": 27,
+    "cost_level": "Low",
+    "insurance_accepted": false,
+    "emergency_services": true,
+    "icu_beds": 15,
+    "operation_theaters": 9,
+    "ambulance_services": true,
+    "created_at": "2015-10-27 20:48:06.781019"
+  },
+  {
+    "id": "hospital_1_0",
+    "name": "Bombay Hospital - Mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "latitude": 19.00246597561375,
+    "longitude": 72.86149068364139,
+    "contact_number": "+91-2558147013",
+    "emergency_contact": "+91-5647556823",
+    "bed_capacity": 446,
+    "is_government": true,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 42,
+    "overall_rating": 3.6,
+    "specialties": {
+      "oncology": {
+        "rating": 4.9,
+        "doctors_count": 2,
+        "procedures_available": [
+          "chemotherapy",
+          "bone marrow transplant",
+          "surgery",
+          "immunotherapy",
+          "radiation therapy"
+        ],
+        "equipment_available": [
+          "mri",
+          "proton therapy",
+          "linear accelerator"
+        ],
+        "wait_time_days": 27,
+        "success_rate": 98.4
+      },
+      "cardiology": {
+        "rating": 3.9,
+        "doctors_count": 2,
+        "procedures_available": [
+          "pacemaker"
+        ],
+        "equipment_available": [
+          "stress test"
+        ],
+        "wait_time_days": 3,
+        "success_rate": 85.3
+      },
+      "pediatrics": {
+        "rating": 5.0,
+        "doctors_count": 8,
+        "procedures_available": [
+          "vaccination",
+          "developmental assessment"
+        ],
+        "equipment_available": [
+          "pediatric mri",
+          "neonatal icu",
+          "play therapy room"
+        ],
+        "wait_time_days": 16,
+        "success_rate": 89.5
+      }
+    },
+    "equipment_quality": 4.4,
+    "doctor_expertise": 3.6,
+    "infrastructure": 3.1,
+    "patient_satisfaction": 4.8,
+    "wait_time_minutes": 68,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 13,
+    "operation_theaters": 7,
+    "ambulance_services": true,
+    "created_at": "2019-11-04 20:48:06.781236"
+  },
+  {
+    "id": "hospital_1_1",
+    "name": "Kokilaben Hospital - Mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "latitude": 19.0600193848379,
+    "longitude": 72.86899249615833,
+    "contact_number": "+91-6412683171",
+    "emergency_contact": "+91-8128525107",
+    "bed_capacity": 328,
+    "is_government": false,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 61,
+    "overall_rating": 4.0,
+    "specialties": {
+      "pediatrics": {
+        "rating": 3.2,
+        "doctors_count": 10,
+        "procedures_available": [
+          "developmental assessment",
+          "pediatric surgery",
+          "vaccination",
+          "neonatal care"
+        ],
+        "equipment_available": [
+          "pediatric mri",
+          "play therapy room",
+          "child-friendly facilities",
+          "neonatal icu"
+        ],
+        "wait_time_days": 29,
+        "success_rate": 85.1
+      },
+      "oncology": {
+        "rating": 4.6,
+        "doctors_count": 3,
+        "procedures_available": [
+          "radiation therapy"
+        ],
+        "equipment_available": [
+          "proton therapy",
+          "linear accelerator",
+          "cyberknife",
+          "mri"
+        ],
+        "wait_time_days": 23,
+        "success_rate": 85.8
+      },
+      "orthopedics": {
+        "rating": 3.0,
+        "doctors_count": 2,
+        "procedures_available": [
+          "joint replacement",
+          "spinal surgery"
+        ],
+        "equipment_available": [
+          "rehabilitation center",
+          "surgical robots"
+        ],
+        "wait_time_days": 21,
+        "success_rate": 95.4
+      },
+      "neurology": {
+        "rating": 3.8,
+        "doctors_count": 2,
+        "procedures_available": [
+          "aneurysm repair"
+        ],
+        "equipment_available": [
+          "ct scan",
+          "eeg",
+          "pet scan"
+        ],
+        "wait_time_days": 10,
+        "success_rate": 97.6
+      }
+    },
+    "equipment_quality": 3.5,
+    "doctor_expertise": 4.3,
+    "infrastructure": 3.5,
+    "patient_satisfaction": 4.3,
+    "wait_time_minutes": 93,
+    "cost_level": "Low",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 10,
+    "operation_theaters": 2,
+    "ambulance_services": true,
+    "created_at": "2019-01-28 20:48:06.781513"
+  },
+  {
+    "id": "hospital_1_2",
+    "name": "Sir Ganga Ram Hospital - Mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "latitude": 19.0034359560843,
+    "longitude": 72.89503443366489,
+    "contact_number": "+91-3652928125",
+    "emergency_contact": "+91-7970286769",
+    "bed_capacity": 94,
+    "is_government": false,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 0,
+    "overall_rating": 4.6,
+    "specialties": {
+      "neurology": {
+        "rating": 3.6,
+        "doctors_count": 6,
+        "procedures_available": [
+          "neurosurgery"
+        ],
+        "equipment_available": [
+          "pet scan",
+          "ct scan"
+        ],
+        "wait_time_days": 11,
+        "success_rate": 94.6
+      },
+      "oncology": {
+        "rating": 4.0,
+        "doctors_count": 8,
+        "procedures_available": [
+          "surgery",
+          "radiation therapy",
+          "chemotherapy",
+          "immunotherapy",
+          "bone marrow transplant"
+        ],
+        "equipment_available": [
+          "mri"
+        ],
+        "wait_time_days": 27,
+        "success_rate": 87.8
+      },
+      "cardiology": {
+        "rating": 4.7,
+        "doctors_count": 5,
+        "procedures_available": [
+          "pacemaker",
+          "heart transplant",
+          "bypass surgery",
+          "valve replacement"
+        ],
+        "equipment_available": [
+          "cardiac mri",
+          "cath lab",
+          "stress test",
+          "ecg"
+        ],
+        "wait_time_days": 11,
+        "success_rate": 93.8
+      },
+      "orthopedics": {
+        "rating": 4.5,
+        "doctors_count": 2,
+        "procedures_available": [
+          "spinal surgery",
+          "joint replacement",
+          "arthroscopy"
+        ],
+        "equipment_available": [
+          "x-ray",
+          "surgical robots",
+          "rehabilitation center",
+          "mri"
+        ],
+        "wait_time_days": 30,
+        "success_rate": 88.5
+      },
+      "pediatrics": {
+        "rating": 4.8,
+        "doctors_count": 2,
+        "procedures_available": [
+          "neonatal care",
+          "vaccination",
+          "developmental assessment",
+          "pediatric surgery"
+        ],
+        "equipment_available": [
+          "pediatric mri",
+          "neonatal icu",
+          "play therapy room"
+        ],
+        "wait_time_days": 7,
+        "success_rate": 94.7
+      }
+    },
+    "equipment_quality": 4.2,
+    "doctor_expertise": 4.4,
+    "infrastructure": 5.0,
+    "patient_satisfaction": 4.3,
+    "wait_time_minutes": 22,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 16,
+    "operation_theaters": 9,
+    "ambulance_services": true,
+    "created_at": "2024-12-09 20:48:06.781760"
+  },
+  {
+    "id": "hospital_1_3",
+    "name": "Fortis Healthcare - Mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "latitude": 19.059798091412603,
+    "longitude": 72.8721394525966,
+    "contact_number": "+91-9564410596",
+    "emergency_contact": "+91-2550339420",
+    "bed_capacity": 114,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 34,
+    "overall_rating": 4.7,
+    "specialties": {
+      "orthopedics": {
+        "rating": 4.7,
+        "doctors_count": 8,
+        "procedures_available": [
+          "joint replacement",
+          "arthroscopy",
+          "fracture repair"
+        ],
+        "equipment_available": [
+          "x-ray",
+          "mri",
+          "surgical robots"
+        ],
+        "wait_time_days": 19,
+        "success_rate": 96.3
+      },
+      "neurology": {
+        "rating": 3.8,
+        "doctors_count": 4,
+        "procedures_available": [
+          "brain surgery",
+          "deep brain stimulation",
+          "neurosurgery"
+        ],
+        "equipment_available": [
+          "ct scan",
+          "eeg",
+          "pet scan",
+          "mri"
+        ],
+        "wait_time_days": 26,
+        "success_rate": 94.6
+      },
+      "oncology": {
+        "rating": 3.6,
+        "doctors_count": 10,
+        "procedures_available": [
+          "bone marrow transplant",
+          "immunotherapy"
+        ],
+        "equipment_available": [
+          "mri",
+          "pet-ct",
+          "linear accelerator",
+          "proton therapy",
+          "cyberknife"
+        ],
+        "wait_time_days": 26,
+        "success_rate": 85.4
+      },
+      "cardiology": {
+        "rating": 4.6,
+        "doctors_count": 3,
+        "procedures_available": [
+          "heart transplant",
+          "angioplasty",
+          "bypass surgery"
+        ],
+        "equipment_available": [
+          "stress test",
+          "cath lab",
+          "cardiac mri"
+        ],
+        "wait_time_days": 23,
+        "success_rate": 85.2
+      },
+      "emergency": {
+        "rating": 4.1,
+        "doctors_count": 6,
+        "procedures_available": [
+          "trauma surgery",
+          "stabilization"
+        ],
+        "equipment_available": [
+          "critical care unit",
+          "ambulance bay"
+        ],
+        "wait_time_days": 8,
+        "success_rate": 89.5
+      }
+    },
+    "equipment_quality": 3.0,
+    "doctor_expertise": 4.2,
+    "infrastructure": 4.6,
+    "patient_satisfaction": 4.1,
+    "wait_time_minutes": 46,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 25,
+    "operation_theaters": 10,
+    "ambulance_services": true,
+    "created_at": "2015-10-16 20:48:06.782017"
+  },
+  {
+    "id": "hospital_2_0",
+    "name": "Medanta - Bangalore",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "latitude": 13.047512211532062,
+    "longitude": 77.63122709816867,
+    "contact_number": "+91-4061793011",
+    "emergency_contact": "+91-5005854497",
+    "bed_capacity": 241,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 136,
+    "overall_rating": 4.2,
+    "specialties": {
+      "neurology": {
+        "rating": 3.3,
+        "doctors_count": 7,
+        "procedures_available": [
+          "deep brain stimulation",
+          "neurosurgery",
+          "brain surgery"
+        ],
+        "equipment_available": [
+          "neurosurgery suite"
+        ],
+        "wait_time_days": 1,
+        "success_rate": 88.7
+      },
+      "emergency": {
+        "rating": 4.9,
+        "doctors_count": 2,
+        "procedures_available": [
+          "emergency medicine",
+          "trauma surgery"
+        ],
+        "equipment_available": [
+          "trauma bay",
+          "emergency or"
+        ],
+        "wait_time_days": 6,
+        "success_rate": 85.3
+      },
+      "orthopedics": {
+        "rating": 3.6,
+        "doctors_count": 7,
+        "procedures_available": [
+          "joint replacement"
+        ],
+        "equipment_available": [
+          "surgical robots",
+          "mri",
+          "x-ray",
+          "rehabilitation center"
+        ],
+        "wait_time_days": 8,
+        "success_rate": 88.8
+      }
+    },
+    "equipment_quality": 3.4,
+    "doctor_expertise": 3.4,
+    "infrastructure": 4.1,
+    "patient_satisfaction": 4.7,
+    "wait_time_minutes": 116,
+    "cost_level": "Low",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 7,
+    "operation_theaters": 12,
+    "ambulance_services": true,
+    "created_at": "2025-06-09 20:48:06.782214"
+  },
+  {
+    "id": "hospital_2_1",
+    "name": "Breach Candy Hospital - Bangalore",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "latitude": 12.951679931589169,
+    "longitude": 77.69229596135838,
+    "contact_number": "+91-6392085571",
+    "emergency_contact": "+91-3036572273",
+    "bed_capacity": 72,
+    "is_government": false,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 0,
+    "overall_rating": 4.3,
+    "specialties": {
+      "pediatrics": {
+        "rating": 4.1,
+        "doctors_count": 7,
+        "procedures_available": [
+          "developmental assessment",
+          "neonatal care",
+          "vaccination",
+          "pediatric surgery"
+        ],
+        "equipment_available": [
+          "pediatric mri",
+          "play therapy room",
+          "child-friendly facilities",
+          "neonatal icu"
+        ],
+        "wait_time_days": 29,
+        "success_rate": 98.4
+      },
+      "emergency": {
+        "rating": 3.9,
+        "doctors_count": 9,
+        "procedures_available": [
+          "emergency medicine",
+          "resuscitation"
+        ],
+        "equipment_available": [
+          "emergency or",
+          "critical care unit",
+          "trauma bay",
+          "ambulance bay"
+        ],
+        "wait_time_days": 23,
+        "success_rate": 98.0
+      },
+      "oncology": {
+        "rating": 3.4,
+        "doctors_count": 1,
+        "procedures_available": [
+          "surgery",
+          "bone marrow transplant"
+        ],
+        "equipment_available": [
+          "cyberknife",
+          "linear accelerator",
+          "pet-ct"
+        ],
+        "wait_time_days": 24,
+        "success_rate": 88.1
+      }
+    },
+    "equipment_quality": 3.9,
+    "doctor_expertise": 3.6,
+    "infrastructure": 4.7,
+    "patient_satisfaction": 3.3,
+    "wait_time_minutes": 60,
+    "cost_level": "Medium",
+    "insurance_accepted": false,
+    "emergency_services": true,
+    "icu_beds": 30,
+    "operation_theaters": 7,
+    "ambulance_services": false,
+    "created_at": "2020-07-17 20:48:06.782417"
+  },
+  {
+    "id": "hospital_2_2",
+    "name": "Tata Memorial Hospital - Bangalore",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "latitude": 12.951584395078042,
+    "longitude": 77.62436005155124,
+    "contact_number": "+91-7532014239",
+    "emergency_contact": "+91-4359810044",
+    "bed_capacity": 441,
+    "is_government": false,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 95,
+    "overall_rating": 4.0,
+    "specialties": {
+      "oncology": {
+        "rating": 4.0,
+        "doctors_count": 1,
+        "procedures_available": [
+          "immunotherapy",
+          "chemotherapy",
+          "radiation therapy"
+        ],
+        "equipment_available": [
+          "proton therapy",
+          "pet-ct",
+          "mri",
+          "cyberknife"
+        ],
+        "wait_time_days": 16,
+        "success_rate": 88.6
+      },
+      "neurology": {
+        "rating": 3.8,
+        "doctors_count": 6,
+        "procedures_available": [
+          "deep brain stimulation",
+          "neurosurgery"
+        ],
+        "equipment_available": [
+          "ct scan",
+          "eeg",
+          "neurosurgery suite",
+          "pet scan"
+        ],
+        "wait_time_days": 28,
+        "success_rate": 98.1
+      },
+      "emergency": {
+        "rating": 3.7,
+        "doctors_count": 5,
+        "procedures_available": [
+          "emergency medicine",
+          "trauma surgery",
+          "stabilization"
+        ],
+        "equipment_available": [
+          "ambulance bay"
+        ],
+        "wait_time_days": 22,
+        "success_rate": 90.4
+      },
+      "pediatrics": {
+        "rating": 3.5,
+        "doctors_count": 8,
+        "procedures_available": [
+          "developmental assessment",
+          "neonatal care"
+        ],
+        "equipment_available": [
+          "pediatric mri",
+          "child-friendly facilities"
+        ],
+        "wait_time_days": 26,
+        "success_rate": 88.0
+      }
+    },
+    "equipment_quality": 4.4,
+    "doctor_expertise": 5.0,
+    "infrastructure": 4.6,
+    "patient_satisfaction": 4.9,
+    "wait_time_minutes": 115,
+    "cost_level": "Low",
+    "insurance_accepted": false,
+    "emergency_services": true,
+    "icu_beds": 28,
+    "operation_theaters": 14,
+    "ambulance_services": true,
+    "created_at": "2022-04-24 20:48:06.782653"
+  },
+  {
+    "id": "hospital_3_0",
+    "name": "KEM Hospital - Chennai",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "latitude": 13.127497310491492,
+    "longitude": 77.21184327981713,
+    "contact_number": "+91-5806880160",
+    "emergency_contact": "+91-6130638240",
+    "bed_capacity": 441,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 172,
+    "overall_rating": 3.9,
+    "specialties": {
+      "oncology": {
+        "rating": 3.9,
+        "doctors_count": 4,
+        "procedures_available": [
+          "surgery",
+          "chemotherapy"
+        ],
+        "equipment_available": [
+          "mri",
+          "cyberknife",
+          "pet-ct",
+          "linear accelerator",
+          "proton therapy"
+        ],
+        "wait_time_days": 28,
+        "success_rate": 89.4
+      },
+      "cardiology": {
+        "rating": 3.8,
+        "doctors_count": 4,
+        "procedures_available": [
+          "angioplasty",
+          "pacemaker",
+          "bypass surgery",
+          "heart transplant",
+          "valve replacement"
+        ],
+        "equipment_available": [
+          "ecg",
+          "cardiac mri",
+          "echocardiogram",
+          "stress test",
+          "cath lab"
+        ],
+        "wait_time_days": 4,
+        "success_rate": 87.0
+      },
+      "orthopedics": {
+        "rating": 3.7,
+        "doctors_count": 9,
+        "procedures_available": [
+          "spinal surgery",
+          "joint replacement"
+        ],
+        "equipment_available": [
+          "surgical robots"
+        ],
+        "wait_time_days": 12,
+        "success_rate": 95.7
+      },
+      "neurology": {
+        "rating": 3.0,
+        "doctors_count": 6,
+        "procedures_available": [
+          "aneurysm repair"
+        ],
+        "equipment_available": [
+          "ct scan",
+          "pet scan"
+        ],
+        "wait_time_days": 10,
+        "success_rate": 89.1
+      }
+    },
+    "equipment_quality": 3.6,
+    "doctor_expertise": 3.0,
+    "infrastructure": 3.7,
+    "patient_satisfaction": 3.1,
+    "wait_time_minutes": 78,
+    "cost_level": "High",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 37,
+    "operation_theaters": 12,
+    "ambulance_services": true,
+    "created_at": "2025-08-02 20:48:06.782901"
+  },
+  {
+    "id": "hospital_3_1",
+    "name": "Ram Manohar Lohia Hospital - Chennai",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "latitude": 13.001843285117648,
+    "longitude": 77.21704767329992,
+    "contact_number": "+91-9996099541",
+    "emergency_contact": "+91-1930236799",
+    "bed_capacity": 296,
+    "is_government": true,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 135,
+    "overall_rating": 4.3,
+    "specialties": {
+      "oncology": {
+        "rating": 4.4,
+        "doctors_count": 6,
+        "procedures_available": [
+          "radiation therapy",
+          "surgery"
+        ],
+        "equipment_available": [
+          "pet-ct",
+          "mri",
+          "cyberknife",
+          "linear accelerator"
+        ],
+        "wait_time_days": 6,
+        "success_rate": 91.2
+      },
+      "orthopedics": {
+        "rating": 3.9,
+        "doctors_count": 4,
+        "procedures_available": [
+          "arthroscopy",
+          "spinal surgery",
+          "joint replacement",
+          "fracture repair"
+        ],
+        "equipment_available": [
+          "mri"
+        ],
+        "wait_time_days": 26,
+        "success_rate": 92.4
+      },
+      "neurology": {
+        "rating": 4.1,
+        "doctors_count": 10,
+        "procedures_available": [
+          "neurosurgery",
+          "deep brain stimulation",
+          "brain surgery",
+          "aneurysm repair"
+        ],
+        "equipment_available": [
+          "neurosurgery suite",
+          "eeg"
+        ],
+        "wait_time_days": 4,
+        "success_rate": 95.2
+      }
+    },
+    "equipment_quality": 3.4,
+    "doctor_expertise": 3.1,
+    "infrastructure": 4.7,
+    "patient_satisfaction": 4.6,
+    "wait_time_minutes": 89,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 45,
+    "operation_theaters": 10,
+    "ambulance_services": true,
+    "created_at": "2016-10-05 20:48:06.783113"
+  },
+  {
+    "id": "hospital_3_2",
+    "name": "Narayana Health - Chennai",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "latitude": 13.079972419227735,
+    "longitude": 77.28767796504307,
+    "contact_number": "+91-2364198662",
+    "emergency_contact": "+91-1719415748",
+    "bed_capacity": 52,
+    "is_government": false,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 11,
+    "overall_rating": 4.9,
+    "specialties": {
+      "emergency": {
+        "rating": 4.2,
+        "doctors_count": 4,
+        "procedures_available": [
+          "trauma surgery"
+        ],
+        "equipment_available": [
+          "ambulance bay",
+          "emergency or",
+          "critical care unit"
+        ],
+        "wait_time_days": 14,
+        "success_rate": 86.3
+      },
+      "cardiology": {
+        "rating": 4.3,
+        "doctors_count": 1,
+        "procedures_available": [
+          "angioplasty",
+          "bypass surgery",
+          "heart transplant",
+          "pacemaker"
+        ],
+        "equipment_available": [
+          "cardiac mri",
+          "ecg",
+          "cath lab"
+        ],
+        "wait_time_days": 23,
+        "success_rate": 89.6
+      }
+    },
+    "equipment_quality": 3.2,
+    "doctor_expertise": 3.6,
+    "infrastructure": 3.1,
+    "patient_satisfaction": 4.5,
+    "wait_time_minutes": 91,
+    "cost_level": "High",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 42,
+    "operation_theaters": 8,
+    "ambulance_services": false,
+    "created_at": "2021-03-14 20:48:06.783275"
+  },
+  {
+    "id": "hospital_4_0",
+    "name": "Fortis Healthcare - Kolkata",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "latitude": 22.518710336599938,
+    "longitude": 88.44599351618209,
+    "contact_number": "+91-5275198246",
+    "emergency_contact": "+91-1716119346",
+    "bed_capacity": 88,
+    "is_government": true,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 0,
+    "overall_rating": 4.3,
+    "specialties": {
+      "pediatrics": {
+        "rating": 4.0,
+        "doctors_count": 9,
+        "procedures_available": [
+          "pediatric surgery",
+          "neonatal care"
+        ],
+        "equipment_available": [
+          "play therapy room",
+          "neonatal icu"
+        ],
+        "wait_time_days": 24,
+        "success_rate": 96.9
+      },
+      "cardiology": {
+        "rating": 4.0,
+        "doctors_count": 6,
+        "procedures_available": [
+          "heart transplant"
+        ],
+        "equipment_available": [
+          "echocardiogram"
+        ],
+        "wait_time_days": 28,
+        "success_rate": 91.6
+      }
+    },
+    "equipment_quality": 3.6,
+    "doctor_expertise": 3.4,
+    "infrastructure": 4.7,
+    "patient_satisfaction": 4.8,
+    "wait_time_minutes": 94,
+    "cost_level": "Low",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 44,
+    "operation_theaters": 8,
+    "ambulance_services": true,
+    "created_at": "2020-02-04 20:48:06.783427"
+  },
+  {
+    "id": "hospital_4_1",
+    "name": "Sir Ganga Ram Hospital - Kolkata",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "latitude": 22.49195648063099,
+    "longitude": 88.30214582608816,
+    "contact_number": "+91-6048261649",
+    "emergency_contact": "+91-6705794308",
+    "bed_capacity": 459,
+    "is_government": true,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 0,
+    "overall_rating": 4.1,
+    "specialties": {
+      "neurology": {
+        "rating": 3.9,
+        "doctors_count": 4,
+        "procedures_available": [
+          "brain surgery",
+          "aneurysm repair"
+        ],
+        "equipment_available": [
+          "pet scan",
+          "mri",
+          "neurosurgery suite"
+        ],
+        "wait_time_days": 23,
+        "success_rate": 97.7
+      },
+      "orthopedics": {
+        "rating": 3.7,
+        "doctors_count": 4,
+        "procedures_available": [
+          "arthroscopy"
+        ],
+        "equipment_available": [
+          "surgical robots",
+          "x-ray",
+          "mri"
+        ],
+        "wait_time_days": 5,
+        "success_rate": 89.2
+      }
+    },
+    "equipment_quality": 4.5,
+    "doctor_expertise": 3.6,
+    "infrastructure": 3.6,
+    "patient_satisfaction": 3.8,
+    "wait_time_minutes": 74,
+    "cost_level": "Low",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 8,
+    "operation_theaters": 11,
+    "ambulance_services": true,
+    "created_at": "2017-09-07 20:48:06.783618"
+  },
+  {
+    "id": "hospital_4_2",
+    "name": "Breach Candy Hospital - Kolkata",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "latitude": 22.644515747540606,
+    "longitude": 88.4540460202669,
+    "contact_number": "+91-5178726244",
+    "emergency_contact": "+91-9544364839",
+    "bed_capacity": 159,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 0,
+    "overall_rating": 4.2,
+    "specialties": {
+      "orthopedics": {
+        "rating": 3.8,
+        "doctors_count": 2,
+        "procedures_available": [
+          "spinal surgery",
+          "fracture repair",
+          "joint replacement"
+        ],
+        "equipment_available": [
+          "mri",
+          "surgical robots",
+          "x-ray",
+          "rehabilitation center"
+        ],
+        "wait_time_days": 8,
+        "success_rate": 96.2
+      },
+      "cardiology": {
+        "rating": 4.6,
+        "doctors_count": 5,
+        "procedures_available": [
+          "bypass surgery",
+          "valve replacement",
+          "pacemaker",
+          "heart transplant",
+          "angioplasty"
+        ],
+        "equipment_available": [
+          "cath lab",
+          "echocardiogram",
+          "stress test"
+        ],
+        "wait_time_days": 14,
+        "success_rate": 86.6
+      },
+      "emergency": {
+        "rating": 3.6,
+        "doctors_count": 5,
+        "procedures_available": [
+          "emergency medicine",
+          "resuscitation",
+          "trauma surgery",
+          "stabilization"
+        ],
+        "equipment_available": [
+          "ambulance bay",
+          "critical care unit",
+          "trauma bay"
+        ],
+        "wait_time_days": 10,
+        "success_rate": 92.3
+      },
+      "pediatrics": {
+        "rating": 3.7,
+        "doctors_count": 1,
+        "procedures_available": [
+          "vaccination",
+          "developmental assessment",
+          "neonatal care"
+        ],
+        "equipment_available": [
+          "neonatal icu",
+          "child-friendly facilities",
+          "pediatric mri",
+          "play therapy room"
+        ],
+        "wait_time_days": 16,
+        "success_rate": 98.1
+      }
+    },
+    "equipment_quality": 3.7,
+    "doctor_expertise": 4.1,
+    "infrastructure": 4.5,
+    "patient_satisfaction": 4.9,
+    "wait_time_minutes": 60,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 17,
+    "operation_theaters": 2,
+    "ambulance_services": true,
+    "created_at": "2018-08-05 20:48:06.783837"
+  },
+  {
+    "id": "hospital_5_0",
+    "name": "Narayana Health - Hyderabad",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "latitude": 17.35409669556816,
+    "longitude": 78.44243452595512,
+    "contact_number": "+91-9004282371",
+    "emergency_contact": "+91-1686740772",
+    "bed_capacity": 347,
+    "is_government": true,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 109,
+    "overall_rating": 4.6,
+    "specialties": {
+      "neurology": {
+        "rating": 4.0,
+        "doctors_count": 6,
+        "procedures_available": [
+          "deep brain stimulation"
+        ],
+        "equipment_available": [
+          "mri",
+          "neurosurgery suite"
+        ],
+        "wait_time_days": 21,
+        "success_rate": 87.7
+      },
+      "pediatrics": {
+        "rating": 3.1,
+        "doctors_count": 1,
+        "procedures_available": [
+          "neonatal care",
+          "developmental assessment",
+          "pediatric surgery",
+          "vaccination"
+        ],
+        "equipment_available": [
+          "child-friendly facilities",
+          "play therapy room",
+          "neonatal icu"
+        ],
+        "wait_time_days": 20,
+        "success_rate": 97.4
+      },
+      "cardiology": {
+        "rating": 3.7,
+        "doctors_count": 4,
+        "procedures_available": [
+          "pacemaker",
+          "valve replacement"
+        ],
+        "equipment_available": [
+          "echocardiogram",
+          "cath lab",
+          "stress test",
+          "ecg"
+        ],
+        "wait_time_days": 9,
+        "success_rate": 98.4
+      }
+    },
+    "equipment_quality": 3.6,
+    "doctor_expertise": 4.4,
+    "infrastructure": 3.5,
+    "patient_satisfaction": 4.4,
+    "wait_time_minutes": 80,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 31,
+    "operation_theaters": 2,
+    "ambulance_services": true,
+    "created_at": "2025-03-07 20:48:06.783998"
+  },
+  {
+    "id": "hospital_5_1",
+    "name": "Medanta - Hyderabad",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "latitude": 17.362371659384237,
+    "longitude": 78.40937864838075,
+    "contact_number": "+91-8250019668",
+    "emergency_contact": "+91-6357459325",
+    "bed_capacity": 200,
+    "is_government": true,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 0,
+    "overall_rating": 4.3,
+    "specialties": {
+      "emergency": {
+        "rating": 4.6,
+        "doctors_count": 4,
+        "procedures_available": [
+          "stabilization",
+          "resuscitation",
+          "trauma surgery"
+        ],
+        "equipment_available": [
+          "trauma bay",
+          "emergency or",
+          "critical care unit",
+          "ambulance bay"
+        ],
+        "wait_time_days": 1,
+        "success_rate": 92.8
+      },
+      "orthopedics": {
+        "rating": 4.6,
+        "doctors_count": 5,
+        "procedures_available": [
+          "spinal surgery",
+          "joint replacement",
+          "fracture repair"
+        ],
+        "equipment_available": [
+          "surgical robots",
+          "rehabilitation center"
+        ],
+        "wait_time_days": 29,
+        "success_rate": 94.6
+      },
+      "cardiology": {
+        "rating": 4.4,
+        "doctors_count": 6,
+        "procedures_available": [
+          "angioplasty",
+          "pacemaker",
+          "bypass surgery"
+        ],
+        "equipment_available": [
+          "echocardiogram"
+        ],
+        "wait_time_days": 16,
+        "success_rate": 89.4
+      },
+      "neurology": {
+        "rating": 3.5,
+        "doctors_count": 1,
+        "procedures_available": [
+          "brain surgery"
+        ],
+        "equipment_available": [
+          "neurosurgery suite",
+          "eeg",
+          "mri",
+          "ct scan",
+          "pet scan"
+        ],
+        "wait_time_days": 21,
+        "success_rate": 90.7
+      },
+      "oncology": {
+        "rating": 3.5,
+        "doctors_count": 9,
+        "procedures_available": [
+          "immunotherapy",
+          "surgery",
+          "radiation therapy"
+        ],
+        "equipment_available": [
+          "mri",
+          "cyberknife"
+        ],
+        "wait_time_days": 24,
+        "success_rate": 87.1
+      }
+    },
+    "equipment_quality": 4.2,
+    "doctor_expertise": 4.8,
+    "infrastructure": 4.5,
+    "patient_satisfaction": 4.9,
+    "wait_time_minutes": 96,
+    "cost_level": "Medium",
+    "insurance_accepted": false,
+    "emergency_services": true,
+    "icu_beds": 34,
+    "operation_theaters": 10,
+    "ambulance_services": false,
+    "created_at": "2018-09-17 20:48:06.784217"
+  },
+  {
+    "id": "hospital_5_2",
+    "name": "Sir Ganga Ram Hospital - Hyderabad",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "latitude": 17.46436647094663,
+    "longitude": 78.40488249341047,
+    "contact_number": "+91-6056280218",
+    "emergency_contact": "+91-1785020540",
+    "bed_capacity": 65,
+    "is_government": false,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 81,
+    "overall_rating": 4.3,
+    "specialties": {
+      "pediatrics": {
+        "rating": 3.7,
+        "doctors_count": 5,
+        "procedures_available": [
+          "developmental assessment"
+        ],
+        "equipment_available": [
+          "pediatric mri",
+          "play therapy room"
+        ],
+        "wait_time_days": 4,
+        "success_rate": 88.9
+      },
+      "emergency": {
+        "rating": 4.5,
+        "doctors_count": 9,
+        "procedures_available": [
+          "emergency medicine"
+        ],
+        "equipment_available": [
+          "emergency or"
+        ],
+        "wait_time_days": 30,
+        "success_rate": 98.3
+      },
+      "neurology": {
+        "rating": 4.0,
+        "doctors_count": 1,
+        "procedures_available": [
+          "brain surgery"
+        ],
+        "equipment_available": [
+          "neurosurgery suite",
+          "eeg",
+          "ct scan",
+          "mri",
+          "pet scan"
+        ],
+        "wait_time_days": 26,
+        "success_rate": 95.3
+      },
+      "oncology": {
+        "rating": 4.6,
+        "doctors_count": 6,
+        "procedures_available": [
+          "radiation therapy",
+          "bone marrow transplant",
+          "immunotherapy",
+          "chemotherapy",
+          "surgery"
+        ],
+        "equipment_available": [
+          "linear accelerator",
+          "pet-ct",
+          "proton therapy",
+          "mri",
+          "cyberknife"
+        ],
+        "wait_time_days": 11,
+        "success_rate": 86.9
+      },
+      "cardiology": {
+        "rating": 4.6,
+        "doctors_count": 4,
+        "procedures_available": [
+          "pacemaker",
+          "angioplasty",
+          "heart transplant"
+        ],
+        "equipment_available": [
+          "stress test",
+          "cardiac mri",
+          "cath lab",
+          "ecg",
+          "echocardiogram"
+        ],
+        "wait_time_days": 9,
+        "success_rate": 90.3
+      },
+      "orthopedics": {
+        "rating": 4.0,
+        "doctors_count": 6,
+        "procedures_available": [
+          "fracture repair"
+        ],
+        "equipment_available": [
+          "mri",
+          "x-ray"
+        ],
+        "wait_time_days": 3,
+        "success_rate": 98.3
+      }
+    },
+    "equipment_quality": 4.5,
+    "doctor_expertise": 4.9,
+    "infrastructure": 4.1,
+    "patient_satisfaction": 5.0,
+    "wait_time_minutes": 90,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 18,
+    "operation_theaters": 12,
+    "ambulance_services": false,
+    "created_at": "2017-11-02 20:48:06.784500"
+  },
+  {
+    "id": "hospital_6_0",
+    "name": "Apollo Hospitals - Pune",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "latitude": 18.592383502978986,
+    "longitude": 73.8143554502518,
+    "contact_number": "+91-4242203709",
+    "emergency_contact": "+91-4112039892",
+    "bed_capacity": 70,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 0,
+    "overall_rating": 4.5,
+    "specialties": {
+      "cardiology": {
+        "rating": 3.5,
+        "doctors_count": 2,
+        "procedures_available": [
+          "angioplasty",
+          "pacemaker",
+          "heart transplant",
+          "valve replacement",
+          "bypass surgery"
+        ],
+        "equipment_available": [
+          "cardiac mri"
+        ],
+        "wait_time_days": 23,
+        "success_rate": 96.2
+      },
+      "oncology": {
+        "rating": 3.9,
+        "doctors_count": 8,
+        "procedures_available": [
+          "chemotherapy",
+          "radiation therapy",
+          "bone marrow transplant",
+          "immunotherapy"
+        ],
+        "equipment_available": [
+          "mri"
+        ],
+        "wait_time_days": 26,
+        "success_rate": 91.8
+      },
+      "neurology": {
+        "rating": 3.9,
+        "doctors_count": 4,
+        "procedures_available": [
+          "deep brain stimulation"
+        ],
+        "equipment_available": [
+          "pet scan",
+          "mri",
+          "ct scan",
+          "eeg",
+          "neurosurgery suite"
+        ],
+        "wait_time_days": 21,
+        "success_rate": 86.7
+      },
+      "emergency": {
+        "rating": 3.2,
+        "doctors_count": 9,
+        "procedures_available": [
+          "trauma surgery",
+          "stabilization",
+          "emergency medicine",
+          "resuscitation"
+        ],
+        "equipment_available": [
+          "trauma bay",
+          "emergency or"
+        ],
+        "wait_time_days": 13,
+        "success_rate": 98.3
+      },
+      "pediatrics": {
+        "rating": 4.7,
+        "doctors_count": 4,
+        "procedures_available": [
+          "developmental assessment"
+        ],
+        "equipment_available": [
+          "play therapy room"
+        ],
+        "wait_time_days": 10,
+        "success_rate": 93.0
+      },
+      "orthopedics": {
+        "rating": 4.7,
+        "doctors_count": 10,
+        "procedures_available": [
+          "joint replacement",
+          "spinal surgery",
+          "arthroscopy",
+          "fracture repair"
+        ],
+        "equipment_available": [
+          "rehabilitation center",
+          "surgical robots"
+        ],
+        "wait_time_days": 12,
+        "success_rate": 97.6
+      }
+    },
+    "equipment_quality": 3.4,
+    "doctor_expertise": 3.4,
+    "infrastructure": 3.1,
+    "patient_satisfaction": 5.0,
+    "wait_time_minutes": 98,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 30,
+    "operation_theaters": 12,
+    "ambulance_services": false,
+    "created_at": "2016-02-29 20:48:06.784878"
+  },
+  {
+    "id": "hospital_6_1",
+    "name": "KEM Hospital - Pune",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "latitude": 18.423343199543183,
+    "longitude": 73.9215106047964,
+    "contact_number": "+91-9078229552",
+    "emergency_contact": "+91-6879192727",
+    "bed_capacity": 203,
+    "is_government": true,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 0,
+    "overall_rating": 3.7,
+    "specialties": {
+      "pediatrics": {
+        "rating": 3.1,
+        "doctors_count": 1,
+        "procedures_available": [
+          "pediatric surgery",
+          "vaccination",
+          "neonatal care"
+        ],
+        "equipment_available": [
+          "neonatal icu",
+          "play therapy room",
+          "pediatric mri"
+        ],
+        "wait_time_days": 19,
+        "success_rate": 96.4
+      },
+      "neurology": {
+        "rating": 3.7,
+        "doctors_count": 4,
+        "procedures_available": [
+          "deep brain stimulation"
+        ],
+        "equipment_available": [
+          "eeg",
+          "ct scan",
+          "mri",
+          "pet scan"
+        ],
+        "wait_time_days": 13,
+        "success_rate": 97.0
+      },
+      "emergency": {
+        "rating": 3.3,
+        "doctors_count": 6,
+        "procedures_available": [
+          "trauma surgery",
+          "stabilization"
+        ],
+        "equipment_available": [
+          "emergency or",
+          "critical care unit"
+        ],
+        "wait_time_days": 27,
+        "success_rate": 96.9
+      },
+      "cardiology": {
+        "rating": 3.3,
+        "doctors_count": 10,
+        "procedures_available": [
+          "valve replacement",
+          "pacemaker",
+          "heart transplant",
+          "bypass surgery"
+        ],
+        "equipment_available": [
+          "cardiac mri",
+          "stress test",
+          "ecg",
+          "cath lab"
+        ],
+        "wait_time_days": 27,
+        "success_rate": 88.3
+      },
+      "oncology": {
+        "rating": 3.5,
+        "doctors_count": 7,
+        "procedures_available": [
+          "immunotherapy",
+          "surgery",
+          "chemotherapy",
+          "radiation therapy"
+        ],
+        "equipment_available": [
+          "linear accelerator",
+          "mri",
+          "proton therapy"
+        ],
+        "wait_time_days": 12,
+        "success_rate": 86.4
+      }
+    },
+    "equipment_quality": 3.0,
+    "doctor_expertise": 3.8,
+    "infrastructure": 3.0,
+    "patient_satisfaction": 4.9,
+    "wait_time_minutes": 32,
+    "cost_level": "High",
+    "insurance_accepted": false,
+    "emergency_services": true,
+    "icu_beds": 15,
+    "operation_theaters": 15,
+    "ambulance_services": true,
+    "created_at": "2021-10-23 20:48:06.785148"
+  },
+  {
+    "id": "hospital_6_2",
+    "name": "AIIMS - Pune",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "latitude": 18.535319173372738,
+    "longitude": 73.88659365038458,
+    "contact_number": "+91-3011750759",
+    "emergency_contact": "+91-5839031377",
+    "bed_capacity": 76,
+    "is_government": false,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 36,
+    "overall_rating": 4.5,
+    "specialties": {
+      "cardiology": {
+        "rating": 3.0,
+        "doctors_count": 7,
+        "procedures_available": [
+          "bypass surgery",
+          "angioplasty"
+        ],
+        "equipment_available": [
+          "echocardiogram",
+          "ecg",
+          "cath lab"
+        ],
+        "wait_time_days": 16,
+        "success_rate": 93.7
+      },
+      "emergency": {
+        "rating": 3.3,
+        "doctors_count": 9,
+        "procedures_available": [
+          "trauma surgery",
+          "emergency medicine",
+          "stabilization",
+          "resuscitation"
+        ],
+        "equipment_available": [
+          "ambulance bay",
+          "emergency or",
+          "trauma bay"
+        ],
+        "wait_time_days": 17,
+        "success_rate": 87.4
+      },
+      "neurology": {
+        "rating": 3.5,
+        "doctors_count": 1,
+        "procedures_available": [
+          "neurosurgery",
+          "deep brain stimulation"
+        ],
+        "equipment_available": [
+          "mri",
+          "ct scan"
+        ],
+        "wait_time_days": 20,
+        "success_rate": 98.4
+      },
+      "pediatrics": {
+        "rating": 4.3,
+        "doctors_count": 9,
+        "procedures_available": [
+          "vaccination",
+          "neonatal care"
+        ],
+        "equipment_available": [
+          "neonatal icu",
+          "pediatric mri",
+          "play therapy room",
+          "child-friendly facilities"
+        ],
+        "wait_time_days": 12,
+        "success_rate": 90.2
+      },
+      "oncology": {
+        "rating": 3.1,
+        "doctors_count": 3,
+        "procedures_available": [
+          "immunotherapy",
+          "radiation therapy"
+        ],
+        "equipment_available": [
+          "pet-ct"
+        ],
+        "wait_time_days": 5,
+        "success_rate": 97.7
+      }
+    },
+    "equipment_quality": 3.7,
+    "doctor_expertise": 4.6,
+    "infrastructure": 4.2,
+    "patient_satisfaction": 3.4,
+    "wait_time_minutes": 78,
+    "cost_level": "Medium",
+    "insurance_accepted": false,
+    "emergency_services": true,
+    "icu_beds": 17,
+    "operation_theaters": 5,
+    "ambulance_services": false,
+    "created_at": "2016-04-02 20:48:06.785374"
+  },
+  {
+    "id": "hospital_6_3",
+    "name": "Kokilaben Hospital - Pune",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "latitude": 18.58463607472648,
+    "longitude": 73.95047053741828,
+    "contact_number": "+91-2721085922",
+    "emergency_contact": "+91-3273672393",
+    "bed_capacity": 276,
+    "is_government": true,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 0,
+    "overall_rating": 4.3,
+    "specialties": {
+      "pediatrics": {
+        "rating": 3.4,
+        "doctors_count": 3,
+        "procedures_available": [
+          "developmental assessment",
+          "vaccination",
+          "pediatric surgery"
+        ],
+        "equipment_available": [
+          "play therapy room"
+        ],
+        "wait_time_days": 21,
+        "success_rate": 90.5
+      },
+      "neurology": {
+        "rating": 4.1,
+        "doctors_count": 7,
+        "procedures_available": [
+          "deep brain stimulation",
+          "aneurysm repair"
+        ],
+        "equipment_available": [
+          "ct scan",
+          "neurosurgery suite",
+          "pet scan",
+          "eeg",
+          "mri"
+        ],
+        "wait_time_days": 19,
+        "success_rate": 96.3
+      },
+      "cardiology": {
+        "rating": 3.3,
+        "doctors_count": 2,
+        "procedures_available": [
+          "pacemaker",
+          "valve replacement",
+          "bypass surgery"
+        ],
+        "equipment_available": [
+          "ecg",
+          "cath lab",
+          "echocardiogram"
+        ],
+        "wait_time_days": 12,
+        "success_rate": 89.5
+      }
+    },
+    "equipment_quality": 4.8,
+    "doctor_expertise": 3.1,
+    "infrastructure": 4.4,
+    "patient_satisfaction": 4.5,
+    "wait_time_minutes": 88,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 42,
+    "operation_theaters": 4,
+    "ambulance_services": false,
+    "created_at": "2019-09-12 20:48:06.785597"
+  },
+  {
+    "id": "hospital_7_0",
+    "name": "Medanta - Ahmedabad",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "latitude": 22.995065021212255,
+    "longitude": 72.5205288152045,
+    "contact_number": "+91-8414151827",
+    "emergency_contact": "+91-3710597484",
+    "bed_capacity": 471,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 42,
+    "overall_rating": 4.4,
+    "specialties": {
+      "cardiology": {
+        "rating": 4.5,
+        "doctors_count": 9,
+        "procedures_available": [
+          "heart transplant",
+          "valve replacement",
+          "angioplasty",
+          "pacemaker",
+          "bypass surgery"
+        ],
+        "equipment_available": [
+          "echocardiogram",
+          "ecg",
+          "stress test"
+        ],
+        "wait_time_days": 21,
+        "success_rate": 97.5
+      },
+      "pediatrics": {
+        "rating": 4.9,
+        "doctors_count": 3,
+        "procedures_available": [
+          "developmental assessment",
+          "neonatal care",
+          "vaccination",
+          "pediatric surgery"
+        ],
+        "equipment_available": [
+          "neonatal icu"
+        ],
+        "wait_time_days": 6,
+        "success_rate": 91.7
+      },
+      "orthopedics": {
+        "rating": 4.6,
+        "doctors_count": 5,
+        "procedures_available": [
+          "spinal surgery",
+          "fracture repair",
+          "arthroscopy"
+        ],
+        "equipment_available": [
+          "mri",
+          "x-ray",
+          "surgical robots",
+          "rehabilitation center"
+        ],
+        "wait_time_days": 25,
+        "success_rate": 86.6
+      },
+      "oncology": {
+        "rating": 4.2,
+        "doctors_count": 3,
+        "procedures_available": [
+          "chemotherapy",
+          "bone marrow transplant"
+        ],
+        "equipment_available": [
+          "mri",
+          "cyberknife"
+        ],
+        "wait_time_days": 5,
+        "success_rate": 96.7
+      }
+    },
+    "equipment_quality": 4.6,
+    "doctor_expertise": 3.6,
+    "infrastructure": 4.5,
+    "patient_satisfaction": 4.6,
+    "wait_time_minutes": 120,
+    "cost_level": "Medium",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 17,
+    "operation_theaters": 7,
+    "ambulance_services": true,
+    "created_at": "2023-03-19 20:48:06.785819"
+  },
+  {
+    "id": "hospital_7_1",
+    "name": "Narayana Health - Ahmedabad",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "latitude": 23.025518539258105,
+    "longitude": 72.64360631902656,
+    "contact_number": "+91-1155489354",
+    "emergency_contact": "+91-6827426965",
+    "bed_capacity": 393,
+    "is_government": true,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 84,
+    "overall_rating": 4.5,
+    "specialties": {
+      "neurology": {
+        "rating": 4.4,
+        "doctors_count": 9,
+        "procedures_available": [
+          "aneurysm repair"
+        ],
+        "equipment_available": [
+          "mri"
+        ],
+        "wait_time_days": 28,
+        "success_rate": 91.6
+      },
+      "emergency": {
+        "rating": 3.7,
+        "doctors_count": 9,
+        "procedures_available": [
+          "resuscitation",
+          "stabilization"
+        ],
+        "equipment_available": [
+          "emergency or",
+          "critical care unit"
+        ],
+        "wait_time_days": 3,
+        "success_rate": 94.6
+      },
+      "cardiology": {
+        "rating": 3.8,
+        "doctors_count": 5,
+        "procedures_available": [
+          "pacemaker",
+          "heart transplant",
+          "angioplasty"
+        ],
+        "equipment_available": [
+          "echocardiogram"
+        ],
+        "wait_time_days": 29,
+        "success_rate": 98.9
+      }
+    },
+    "equipment_quality": 3.9,
+    "doctor_expertise": 3.6,
+    "infrastructure": 5.0,
+    "patient_satisfaction": 4.2,
+    "wait_time_minutes": 100,
+    "cost_level": "Medium",
+    "insurance_accepted": false,
+    "emergency_services": true,
+    "icu_beds": 29,
+    "operation_theaters": 13,
+    "ambulance_services": true,
+    "created_at": "2020-04-19 20:48:06.786002"
+  },
+  {
+    "id": "hospital_7_2",
+    "name": "KEM Hospital - Ahmedabad",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "latitude": 22.961324431382035,
+    "longitude": 72.55897446520048,
+    "contact_number": "+91-5088357115",
+    "emergency_contact": "+91-5083654543",
+    "bed_capacity": 382,
+    "is_government": true,
+    "has_blood_bank": true,
+    "blood_bank_capacity": 0,
+    "overall_rating": 5.0,
+    "specialties": {
+      "pediatrics": {
+        "rating": 4.5,
+        "doctors_count": 2,
+        "procedures_available": [
+          "pediatric surgery"
+        ],
+        "equipment_available": [
+          "child-friendly facilities",
+          "play therapy room"
+        ],
+        "wait_time_days": 25,
+        "success_rate": 93.8
+      },
+      "oncology": {
+        "rating": 3.7,
+        "doctors_count": 7,
+        "procedures_available": [
+          "radiation therapy",
+          "bone marrow transplant"
+        ],
+        "equipment_available": [
+          "pet-ct",
+          "mri"
+        ],
+        "wait_time_days": 3,
+        "success_rate": 91.7
+      },
+      "neurology": {
+        "rating": 3.7,
+        "doctors_count": 2,
+        "procedures_available": [
+          "aneurysm repair"
+        ],
+        "equipment_available": [
+          "ct scan",
+          "mri"
+        ],
+        "wait_time_days": 26,
+        "success_rate": 97.3
+      },
+      "orthopedics": {
+        "rating": 4.5,
+        "doctors_count": 4,
+        "procedures_available": [
+          "fracture repair",
+          "spinal surgery",
+          "arthroscopy"
+        ],
+        "equipment_available": [
+          "x-ray"
+        ],
+        "wait_time_days": 7,
+        "success_rate": 93.2
+      },
+      "emergency": {
+        "rating": 3.7,
+        "doctors_count": 8,
+        "procedures_available": [
+          "stabilization",
+          "resuscitation"
+        ],
+        "equipment_available": [
+          "critical care unit",
+          "ambulance bay"
+        ],
+        "wait_time_days": 8,
+        "success_rate": 95.6
+      }
+    },
+    "equipment_quality": 4.6,
+    "doctor_expertise": 4.5,
+    "infrastructure": 4.0,
+    "patient_satisfaction": 4.8,
+    "wait_time_minutes": 43,
+    "cost_level": "Low",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 6,
+    "operation_theaters": 6,
+    "ambulance_services": true,
+    "created_at": "2020-10-30 20:48:06.786255"
+  },
+  {
+    "id": "hospital_7_3",
+    "name": "Ram Manohar Lohia Hospital - Ahmedabad",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "latitude": 23.063437438346575,
+    "longitude": 72.5196033030619,
+    "contact_number": "+91-9625293275",
+    "emergency_contact": "+91-6354615731",
+    "bed_capacity": 308,
+    "is_government": false,
+    "has_blood_bank": false,
+    "blood_bank_capacity": 0,
+    "overall_rating": 3.7,
+    "specialties": {
+      "oncology": {
+        "rating": 3.4,
+        "doctors_count": 10,
+        "procedures_available": [
+          "surgery"
+        ],
+        "equipment_available": [
+          "linear accelerator"
+        ],
+        "wait_time_days": 28,
+        "success_rate": 86.5
+      },
+      "pediatrics": {
+        "rating": 4.1,
+        "doctors_count": 2,
+        "procedures_available": [
+          "neonatal care",
+          "vaccination"
+        ],
+        "equipment_available": [
+          "play therapy room"
+        ],
+        "wait_time_days": 12,
+        "success_rate": 95.1
+      }
+    },
+    "equipment_quality": 4.0,
+    "doctor_expertise": 3.5,
+    "infrastructure": 3.5,
+    "patient_satisfaction": 4.1,
+    "wait_time_minutes": 65,
+    "cost_level": "High",
+    "insurance_accepted": true,
+    "emergency_services": true,
+    "icu_beds": 49,
+    "operation_theaters": 15,
+    "ambulance_services": true,
+    "created_at": "2019-03-02 20:48:06.786409"
+  }
+]

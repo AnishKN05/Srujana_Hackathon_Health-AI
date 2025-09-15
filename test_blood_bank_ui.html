@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .blood-type-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .blood-type-btn {
+            background: white;
+            border: 2px solid #e2e8f0;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .blood-type-btn:hover {
+            background: #f8f9fa;
+        }
+        .blood-type-btn.selected {
+            background: #ef4444;
+            color: white;
+            border-color: #ef4444;
+        }
+        .urgency-levels {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .urgency-btn {
+            background: white;
+            border: 2px solid #e2e8f0;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .urgency-btn:hover {
+            background: #f8f9fa;
+        }
+        .urgency-btn.selected {
+            background: #f59e0b;
+            color: white;
+            border-color: #f59e0b;
+        }
+        .urgency-btn.critical {
+            background: #ef4444;
+            color: white;
+            border-color: #ef4444;
+        }
+        .test-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        .test-btn:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>🩸 Blood Bank Interface Test</h1>
+    
+    <div class="test-section">
+        <h2>Blood Type Selection Test</h2>
+        <div class="blood-type-grid">
+            <button class="blood-type-btn" onclick="selectBloodType('A+')">A+</button>
+            <button class="blood-type-btn" onclick="selectBloodType('A-')">A-</button>
+            <button class="blood-type-btn" onclick="selectBloodType('B+')">B+</button>
+            <button class="blood-type-btn" onclick="selectBloodType('B-')">B-</button>
+            <button class="blood-type-btn" onclick="selectBloodType('AB+')">AB+</button>
+            <button class="blood-type-btn" onclick="selectBloodType('AB-')">AB-</button>
+            <button class="blood-type-btn" onclick="selectBloodType('O+')">O+</button>
+            <button class="blood-type-btn" onclick="selectBloodType('O-')">O-</button>
+        </div>
+        <p>Selected Blood Type: <span id="selectedBloodType">None</span></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Urgency Level Selection Test</h2>
+        <div class="urgency-levels">
+            <button class="urgency-btn" onclick="selectUrgency('low')">Low</button>
+            <button class="urgency-btn" onclick="selectUrgency('medium')">Medium</button>
+            <button class="urgency-btn" onclick="selectUrgency('high')">High</button>
+            <button class="urgency-btn critical" onclick="selectUrgency('critical')">Critical</button>
+        </div>
+        <p>Selected Urgency: <span id="selectedUrgency">None</span></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>API Test</h2>
+        <input type="text" id="testCity" placeholder="Enter city" value="Delhi" style="padding: 8px; margin: 5px;">
+        <input type="text" id="testContact" placeholder="Contact number" value="+91-9876543210" style="padding: 8px; margin: 5px;">
+        <br>
+        <button class="test-btn" onclick="testBloodBankAPI()">Test Blood Bank API</button>
+        <button class="test-btn" onclick="testHospitalsAPI()">Test Hospitals API</button>
+        <div id="testResult" class="result" style="display: none;"></div>
+    </div>
+
+    <script>
+        let selectedBloodType = '';
+        let selectedUrgency = 'medium';
+        
+        // Initialize with default selection
+        document.addEventListener('DOMContentLoaded', function() {
+            selectUrgency('medium');
+        });
+        
+        function selectBloodType(bloodType) {
+            selectedBloodType = bloodType;
+            document.querySelectorAll('.blood-type-btn').forEach(btn => btn.classList.remove('selected'));
+            document.querySelectorAll('.blood-type-btn').forEach(btn => {
+                if (btn.textContent === bloodType) {
+                    btn.classList.add('selected');
+                }
+            });
+            document.getElementById('selectedBloodType').textContent = bloodType;
+            console.log('Selected blood type:', bloodType);
+        }
+        
+        function selectUrgency(urgency) {
+            selectedUrgency = urgency;
+            document.querySelectorAll('.urgency-btn').forEach(btn => btn.classList.remove('selected'));
+            document.querySelectorAll('.urgency-btn').forEach(btn => {
+                if (btn.textContent.toLowerCase() === urgency.toLowerCase()) {
+                    btn.classList.add('selected');
+                }
+            });
+            document.getElementById('selectedUrgency').textContent = urgency;
+            console.log('Selected urgency:', urgency);
+        }
+        
+        async function testBloodBankAPI() {
+            const resultDiv = document.getElementById('testResult');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result';
+            resultDiv.innerHTML = 'Testing blood bank API...';
+            
+            if (!selectedBloodType) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = 'Please select a blood type first!';
+                return;
+            }
+            
+            const city = document.getElementById('testCity').value.trim();
+            const contact = document.getElementById('testContact').value.trim();
+            
+            try {
+                const response = await fetch('/api/blood-bank/request', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        user_id: 'test_user',
+                        blood_type: selectedBloodType,
+                        request_type: 'urgent_blood_request',
+                        urgency_level: selectedUrgency,
+                        city: city,
+                        state: 'Delhi',
+                        contact_number: contact,
+                        additional_info: 'Test request'
+                    })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = `
+                        <h3>✅ Blood Bank API Test Passed!</h3>
+                        <p><strong>Blood Type:</strong> ${data.blood_type}</p>
+                        <p><strong>City:</strong> ${data.city}</p>
+                        <p><strong>Total Units Available:</strong> ${data.availability.total_units_available}</p>
+                        <p><strong>Compatible Donors:</strong> ${data.total_donors_found}</p>
+                        <p><strong>Hospitals with Blood:</strong> ${data.availability.hospitals_with_blood.length}</p>
+                    `;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.innerHTML = `❌ API Error: ${response.status} - ${response.statusText}`;
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `❌ Network Error: ${error.message}`;
+            }
+        }
+        
+        async function testHospitalsAPI() {
+            const resultDiv = document.getElementById('testResult');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result';
+            resultDiv.innerHTML = 'Testing hospitals API...';
+            
+            try {
+                const response = await fetch('/api/blood-bank/hospitals?lat=28.7041&lon=77.1025&radius=50');
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = `
+                        <h3>✅ Hospitals API Test Passed!</h3>
+                        <p><strong>Hospitals Found:</strong> ${data.total_found}</p>
+                        <p><strong>Search Radius:</strong> ${data.search_radius_km} km</p>
+                        <p><strong>Coordinates:</strong> ${data.coordinates.lat}, ${data.coordinates.lon}</p>
+                    `;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.innerHTML = `❌ API Error: ${response.status} - ${response.statusText}`;
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `❌ Network Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
