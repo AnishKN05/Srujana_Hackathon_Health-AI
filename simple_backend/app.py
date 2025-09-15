@@ -1235,6 +1235,486 @@ def get_hospital_doctors():
         logger.error(f"Error getting hospital doctors: {str(e)}")
         return jsonify({'error': f'Failed to get doctors: {str(e)}'}), 500
 
+# Enhanced Diagnostic Services API Endpoints
+
+@app.route('/api/vitals/analyze', methods=['POST'])
+def analyze_vitals():
+    """Analyze vital signs and provide health assessment"""
+    try:
+        data = request.get_json()
+        
+        systolic = data.get('systolic')
+        diastolic = data.get('diastolic')
+        heart_rate = data.get('heartRate')
+        temperature = data.get('temperature')
+        respiratory_rate = data.get('respiratoryRate')
+        oxygen_saturation = data.get('oxygenSaturation')
+        weight = data.get('weight')
+        height = data.get('height')
+        
+        results = {}
+        
+        # Blood Pressure Analysis
+        if systolic and diastolic:
+            if systolic < 120 and diastolic < 80:
+                bp_status = "Normal"
+                bp_interpretation = "Your blood pressure is within the normal range."
+                bp_recommendations = "Continue maintaining a healthy lifestyle with regular exercise and a balanced diet."
+            elif systolic < 130 and diastolic < 80:
+                bp_status = "Elevated"
+                bp_interpretation = "Your blood pressure is slightly elevated. This is considered prehypertension."
+                bp_recommendations = "Consider lifestyle changes including reducing sodium intake, regular exercise, and stress management."
+            elif systolic < 140 or diastolic < 90:
+                bp_status = "High Stage 1"
+                bp_interpretation = "You have Stage 1 hypertension. This requires medical attention."
+                bp_recommendations = "Consult with a healthcare provider for proper management and monitoring."
+            else:
+                bp_status = "High Stage 2"
+                bp_interpretation = "You have Stage 2 hypertension. This requires immediate medical attention."
+                bp_recommendations = "Seek immediate medical care for proper treatment and monitoring."
+            
+            results['bloodPressure'] = {
+                'systolic': systolic,
+                'diastolic': diastolic,
+                'status': bp_status,
+                'interpretation': bp_interpretation,
+                'recommendations': bp_recommendations
+            }
+        
+        # Heart Rate Analysis
+        if heart_rate:
+            if 60 <= heart_rate <= 100:
+                hr_status = "Normal"
+                hr_interpretation = "Your heart rate is within the normal resting range."
+                hr_recommendations = "Continue maintaining cardiovascular health through regular exercise."
+            elif heart_rate < 60:
+                hr_status = "Low"
+                hr_interpretation = "Your heart rate is below normal (bradycardia). This may be normal for athletes."
+                hr_recommendations = "If you experience dizziness or fatigue, consult a healthcare provider."
+            else:
+                hr_status = "High"
+                hr_interpretation = "Your heart rate is above normal (tachycardia). This may indicate stress or other conditions."
+                hr_recommendations = "Consider stress management techniques and consult a healthcare provider if persistent."
+            
+            results['heartRate'] = {
+                'value': heart_rate,
+                'status': hr_status,
+                'interpretation': hr_interpretation,
+                'recommendations': hr_recommendations
+            }
+        
+        # Temperature Analysis
+        if temperature:
+            if 97.8 <= temperature <= 99.1:
+                temp_status = "Normal"
+                temp_interpretation = "Your body temperature is within the normal range."
+                temp_recommendations = "No immediate action needed. Continue monitoring if you feel unwell."
+            elif temperature > 99.1:
+                temp_status = "Fever"
+                temp_interpretation = "You have an elevated body temperature indicating fever."
+                temp_recommendations = "Rest, stay hydrated, and consider fever-reducing medication. Consult a doctor if fever persists or is high."
+            else:
+                temp_status = "Low"
+                temp_interpretation = "Your body temperature is below normal."
+                temp_recommendations = "If you feel unwell, consult a healthcare provider as this may indicate an underlying condition."
+            
+            results['temperature'] = {
+                'value': temperature,
+                'status': temp_status,
+                'interpretation': temp_interpretation,
+                'recommendations': temp_recommendations
+            }
+        
+        # BMI Analysis
+        if weight and height:
+            height_m = height / 100
+            bmi = weight / (height_m ** 2)
+            
+            if bmi < 18.5:
+                bmi_status = "Underweight"
+                bmi_interpretation = "Your BMI indicates you are underweight."
+                bmi_recommendations = "Consult with a healthcare provider or nutritionist to develop a healthy weight gain plan."
+            elif 18.5 <= bmi < 25:
+                bmi_status = "Normal"
+                bmi_interpretation = "Your BMI is within the healthy range."
+                bmi_recommendations = "Maintain your current weight through balanced diet and regular exercise."
+            elif 25 <= bmi < 30:
+                bmi_status = "Overweight"
+                bmi_interpretation = "Your BMI indicates you are overweight."
+                bmi_recommendations = "Consider a balanced diet and regular exercise to achieve a healthier weight."
+            else:
+                bmi_status = "Obese"
+                bmi_interpretation = "Your BMI indicates obesity."
+                bmi_recommendations = "Consult with a healthcare provider for a comprehensive weight management plan."
+            
+            results['bmi'] = {
+                'value': round(bmi, 1),
+                'status': bmi_status,
+                'interpretation': bmi_interpretation,
+                'recommendations': bmi_recommendations
+            }
+        
+        # Overall Assessment
+        overall_assessment = "Based on your vital signs, your overall health status appears to be within acceptable ranges. Continue maintaining a healthy lifestyle."
+        general_recommendations = "Regular exercise, balanced nutrition, adequate sleep, and stress management are key to maintaining good health."
+        
+        results['overallAssessment'] = overall_assessment
+        results['generalRecommendations'] = general_recommendations
+        
+        return jsonify({
+            'success': True,
+            'results': results
+        })
+        
+    except Exception as e:
+        logger.error(f"Error analyzing vital signs: {str(e)}")
+        return jsonify({'error': f'Vital signs analysis failed: {str(e)}'}), 500
+
+@app.route('/api/body-system/analyze', methods=['POST'])
+def analyze_body_system():
+    """Analyze body system symptoms and provide assessment"""
+    try:
+        data = request.get_json()
+        symptoms = data.get('symptoms', [])
+        
+        # Map symptoms to body systems
+        system_mapping = {
+            'chest_pain': 'Cardiovascular',
+            'shortness_breath': 'Cardiovascular',
+            'palpitations': 'Cardiovascular',
+            'swelling_legs': 'Cardiovascular',
+            'dizziness': 'Cardiovascular',
+            'cough': 'Respiratory',
+            'wheezing': 'Respiratory',
+            'chest_tightness': 'Respiratory',
+            'sputum': 'Respiratory',
+            'abdominal_pain': 'Digestive',
+            'nausea': 'Digestive',
+            'diarrhea': 'Digestive',
+            'blood_stool': 'Digestive',
+            'loss_appetite': 'Digestive',
+            'headache': 'Neurological',
+            'seizures': 'Neurological',
+            'numbness': 'Neurological',
+            'weakness': 'Neurological',
+            'coordination': 'Neurological',
+            'joint_pain': 'Musculoskeletal',
+            'back_pain': 'Musculoskeletal',
+            'muscle_cramps': 'Musculoskeletal',
+            'limited_movement': 'Musculoskeletal'
+        }
+        
+        # Group symptoms by system
+        system_symptoms = {}
+        for symptom in symptoms:
+            system = system_mapping.get(symptom, 'General')
+            if system not in system_symptoms:
+                system_symptoms[system] = []
+            system_symptoms[system].append(symptom)
+        
+        # Generate assessments for each affected system
+        affected_systems = []
+        
+        for system, sys_symptoms in system_symptoms.items():
+            if system == 'Cardiovascular':
+                risk_level = 'High' if len(sys_symptoms) >= 3 else 'Medium' if len(sys_symptoms) >= 2 else 'Low'
+                assessment = "Cardiovascular symptoms detected. These may indicate heart or circulation issues."
+                recommendations = "Seek immediate medical attention if experiencing chest pain or shortness of breath. Schedule a cardiology consultation."
+            elif system == 'Respiratory':
+                risk_level = 'High' if 'sputum' in sys_symptoms else 'Medium' if len(sys_symptoms) >= 2 else 'Low'
+                assessment = "Respiratory symptoms detected. These may indicate lung or breathing issues."
+                recommendations = "Consult a pulmonologist if symptoms persist. Avoid smoking and environmental irritants."
+            elif system == 'Digestive':
+                risk_level = 'High' if 'blood_stool' in sys_symptoms else 'Medium' if len(sys_symptoms) >= 3 else 'Low'
+                assessment = "Digestive symptoms detected. These may indicate gastrointestinal issues."
+                recommendations = "Consult a gastroenterologist. Maintain a healthy diet and stay hydrated."
+            elif system == 'Neurological':
+                risk_level = 'High' if 'seizures' in sys_symptoms else 'Medium' if len(sys_symptoms) >= 2 else 'Low'
+                assessment = "Neurological symptoms detected. These may indicate brain or nervous system issues."
+                recommendations = "Seek immediate medical attention for seizures. Consult a neurologist for persistent symptoms."
+            elif system == 'Musculoskeletal':
+                risk_level = 'Medium' if len(sys_symptoms) >= 2 else 'Low'
+                assessment = "Musculoskeletal symptoms detected. These may indicate bone, joint, or muscle issues."
+                recommendations = "Consider physical therapy or orthopedic consultation. Maintain proper posture and regular exercise."
+            else:
+                risk_level = 'Low'
+                assessment = "General symptoms detected."
+                recommendations = "Monitor symptoms and consult a healthcare provider if they worsen."
+            
+            affected_systems.append({
+                'name': system,
+                'symptoms': sys_symptoms,
+                'riskLevel': risk_level,
+                'assessment': assessment,
+                'recommendations': recommendations
+            })
+        
+        # Overall assessment
+        high_risk_systems = [s for s in affected_systems if s['riskLevel'] == 'High']
+        if high_risk_systems:
+            overall_assessment = "High-risk symptoms detected in multiple body systems. Immediate medical attention is recommended."
+            next_steps = "Contact emergency services or visit the nearest emergency room immediately."
+        elif len(affected_systems) >= 3:
+            overall_assessment = "Multiple body systems are affected. A comprehensive medical evaluation is recommended."
+            next_steps = "Schedule an appointment with your primary care physician for a full assessment."
+        else:
+            overall_assessment = "Some body systems show symptoms that require monitoring and potential medical attention."
+            next_steps = "Monitor symptoms and consider consulting appropriate specialists based on the affected systems."
+        
+        return jsonify({
+            'success': True,
+            'affectedSystems': affected_systems,
+            'overallAssessment': overall_assessment,
+            'nextSteps': next_steps
+        })
+        
+    except Exception as e:
+        logger.error(f"Error analyzing body systems: {str(e)}")
+        return jsonify({'error': f'Body system analysis failed: {str(e)}'}), 500
+
+@app.route('/api/mental-health/analyze', methods=['POST'])
+def analyze_mental_health():
+    """Analyze mental health assessment responses"""
+    try:
+        data = request.get_json()
+        responses = data.get('responses', {})
+        
+        # Scoring system
+        score_mapping = {
+            'anxiety': {'never': 0, 'rarely': 1, 'sometimes': 2, 'often': 3, 'always': 4},
+            'mood': {'excellent': 0, 'good': 1, 'fair': 2, 'poor': 3, 'very_poor': 4},
+            'sleep': {'very_well': 0, 'well': 1, 'fairly': 2, 'poorly': 3, 'very_poorly': 4},
+            'concentration': {'never': 0, 'rarely': 1, 'sometimes': 2, 'often': 3, 'always': 4},
+            'interest': {'not_at_all': 0, 'slightly': 1, 'moderately': 2, 'considerably': 3, 'extremely': 4}
+        }
+        
+        # Calculate scores
+        category_scores = []
+        total_score = 0
+        
+        for category, response in responses.items():
+            if category in score_mapping:
+                score = score_mapping[category].get(response, 0)
+                total_score += score
+                
+                if category == 'anxiety':
+                    interpretation = "Low anxiety" if score <= 1 else "Moderate anxiety" if score <= 2 else "High anxiety"
+                elif category == 'mood':
+                    interpretation = "Good mood" if score <= 1 else "Fair mood" if score <= 2 else "Poor mood"
+                elif category == 'sleep':
+                    interpretation = "Good sleep" if score <= 1 else "Fair sleep" if score <= 2 else "Poor sleep"
+                elif category == 'concentration':
+                    interpretation = "Good concentration" if score <= 1 else "Fair concentration" if score <= 2 else "Poor concentration"
+                elif category == 'interest':
+                    interpretation = "Good interest" if score <= 1 else "Fair interest" if score <= 2 else "Poor interest"
+                else:
+                    interpretation = "Normal"
+                
+                category_scores.append({
+                    'name': category.replace('_', ' ').title(),
+                    'score': score,
+                    'interpretation': interpretation
+                })
+        
+        # Determine risk level
+        if total_score <= 5:
+            risk_level = 'Low'
+            assessment = "Your mental health appears to be in good condition. Continue maintaining healthy habits."
+        elif total_score <= 10:
+            risk_level = 'Medium'
+            assessment = "You may be experiencing some mental health challenges. Consider stress management techniques and lifestyle improvements."
+        else:
+            risk_level = 'High'
+            assessment = "You may be experiencing significant mental health challenges. Professional support is recommended."
+        
+        # Generate recommendations
+        recommendations = []
+        if risk_level == 'High':
+            recommendations.extend([
+                "Consider seeking professional mental health support",
+                "Speak with a therapist or counselor",
+                "Contact a mental health hotline if you're in crisis",
+                "Practice stress management techniques daily"
+            ])
+        elif risk_level == 'Medium':
+            recommendations.extend([
+                "Practice regular stress management techniques",
+                "Maintain a consistent sleep schedule",
+                "Engage in regular physical activity",
+                "Consider mindfulness or meditation practices"
+            ])
+        else:
+            recommendations.extend([
+                "Continue maintaining healthy lifestyle habits",
+                "Stay connected with friends and family",
+                "Engage in activities you enjoy",
+                "Monitor your mental health regularly"
+            ])
+        
+        # Urgent care notice for high-risk cases
+        urgent_care = None
+        if total_score >= 15:
+            urgent_care = "If you're having thoughts of self-harm or suicide, please contact emergency services immediately or call a crisis hotline."
+        
+        return jsonify({
+            'success': True,
+            'overallScore': total_score,
+            'riskLevel': risk_level,
+            'categoryScores': category_scores,
+            'assessment': assessment,
+            'recommendations': recommendations,
+            'urgentCare': urgent_care
+        })
+        
+    except Exception as e:
+        logger.error(f"Error analyzing mental health: {str(e)}")
+        return jsonify({'error': f'Mental health analysis failed: {str(e)}'}), 500
+
+@app.route('/api/chronic-risk/analyze', methods=['POST'])
+def analyze_chronic_risk():
+    """Analyze chronic disease risk factors"""
+    try:
+        data = request.get_json()
+        risk_factors = data.get('riskFactors', [])
+        age_range = data.get('ageRange', '')
+        
+        # Calculate risk scores for different diseases
+        disease_risks = []
+        
+        # Diabetes Risk
+        diabetes_score = 0
+        diabetes_factors = []
+        if 'diabetes_family' in risk_factors:
+            diabetes_score += 30
+            diabetes_factors.append('Family history')
+        if 'obesity' in risk_factors:
+            diabetes_score += 25
+            diabetes_factors.append('Obesity')
+        if 'prediabetes' in risk_factors:
+            diabetes_score += 40
+            diabetes_factors.append('Prediabetes')
+        if 'sedentary' in risk_factors:
+            diabetes_score += 15
+            diabetes_factors.append('Sedentary lifestyle')
+        if 'poor_diet' in risk_factors:
+            diabetes_score += 20
+            diabetes_factors.append('Poor diet')
+        if age_range in ['46-60', '61-75', '75+']:
+            diabetes_score += 10
+            diabetes_factors.append('Age')
+        
+        diabetes_risk_level = 'Low' if diabetes_score < 30 else 'Medium' if diabetes_score < 60 else 'High'
+        disease_risks.append({
+            'name': 'Type 2 Diabetes',
+            'riskLevel': diabetes_risk_level,
+            'riskScore': min(diabetes_score, 100),
+            'keyFactors': diabetes_factors,
+            'recommendations': 'Maintain healthy weight, exercise regularly, eat balanced diet, monitor blood sugar levels'
+        })
+        
+        # Heart Disease Risk
+        heart_score = 0
+        heart_factors = []
+        if 'heart_disease_family' in risk_factors:
+            heart_score += 25
+            heart_factors.append('Family history')
+        if 'hypertension' in risk_factors:
+            heart_score += 30
+            heart_factors.append('High blood pressure')
+        if 'high_cholesterol' in risk_factors:
+            heart_score += 25
+            heart_factors.append('High cholesterol')
+        if 'smoking' in risk_factors:
+            heart_score += 35
+            heart_factors.append('Smoking')
+        if 'obesity' in risk_factors:
+            heart_score += 20
+            heart_factors.append('Obesity')
+        if age_range in ['46-60', '61-75', '75+']:
+            heart_score += 15
+            heart_factors.append('Age')
+        
+        heart_risk_level = 'Low' if heart_score < 30 else 'Medium' if heart_score < 60 else 'High'
+        disease_risks.append({
+            'name': 'Heart Disease',
+            'riskLevel': heart_risk_level,
+            'riskScore': min(heart_score, 100),
+            'keyFactors': heart_factors,
+            'recommendations': 'Quit smoking, control blood pressure and cholesterol, exercise regularly, maintain healthy weight'
+        })
+        
+        # Cancer Risk
+        cancer_score = 0
+        cancer_factors = []
+        if 'cancer_family' in risk_factors:
+            cancer_score += 20
+            cancer_factors.append('Family history')
+        if 'smoking' in risk_factors:
+            cancer_score += 40
+            cancer_factors.append('Smoking')
+        if 'alcohol' in risk_factors:
+            cancer_score += 15
+            cancer_factors.append('Alcohol consumption')
+        if 'obesity' in risk_factors:
+            cancer_score += 10
+            cancer_factors.append('Obesity')
+        if age_range in ['46-60', '61-75', '75+']:
+            cancer_score += 20
+            cancer_factors.append('Age')
+        
+        cancer_risk_level = 'Low' if cancer_score < 30 else 'Medium' if cancer_score < 60 else 'High'
+        disease_risks.append({
+            'name': 'Cancer',
+            'riskLevel': cancer_risk_level,
+            'riskScore': min(cancer_score, 100),
+            'keyFactors': cancer_factors,
+            'recommendations': 'Avoid smoking, limit alcohol, maintain healthy weight, get regular screenings'
+        })
+        
+        # Overall risk assessment
+        high_risk_diseases = [d for d in disease_risks if d['riskLevel'] == 'High']
+        if high_risk_diseases:
+            overall_risk = 'High'
+            overall_assessment = "You have high risk factors for chronic diseases. Immediate lifestyle changes and medical consultation are recommended."
+        elif len([d for d in disease_risks if d['riskLevel'] == 'Medium']) >= 2:
+            overall_risk = 'Medium'
+            overall_assessment = "You have moderate risk factors for chronic diseases. Preventive measures and regular health monitoring are important."
+        else:
+            overall_risk = 'Low'
+            overall_assessment = "Your risk for chronic diseases is relatively low. Continue maintaining healthy lifestyle habits."
+        
+        # Prevention strategies
+        prevention_strategies = [
+            "Maintain a healthy weight through balanced diet and regular exercise",
+            "Avoid smoking and limit alcohol consumption",
+            "Eat a diet rich in fruits, vegetables, and whole grains",
+            "Get regular health check-ups and screenings",
+            "Manage stress through relaxation techniques",
+            "Get adequate sleep (7-9 hours per night)",
+            "Stay physically active (at least 150 minutes per week)"
+        ]
+        
+        # Follow-up recommendations
+        if overall_risk == 'High':
+            follow_up = "Schedule appointments with your primary care physician and relevant specialists. Consider a comprehensive health assessment."
+        elif overall_risk == 'Medium':
+            follow_up = "Schedule regular check-ups with your primary care physician. Consider preventive health screenings."
+        else:
+            follow_up = "Continue regular health check-ups and maintain your current healthy lifestyle habits."
+        
+        return jsonify({
+            'success': True,
+            'overallRisk': overall_risk,
+            'overallAssessment': overall_assessment,
+            'diseaseRisks': disease_risks,
+            'preventionStrategies': prevention_strategies,
+            'followUpRecommendations': follow_up
+        })
+        
+    except Exception as e:
+        logger.error(f"Error analyzing chronic disease risk: {str(e)}")
+        return jsonify({'error': f'Chronic disease risk analysis failed: {str(e)}'}), 500
+
 if __name__ == '__main__':
     # Initialize database
     if init_database():
